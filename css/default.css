@@ -90,25 +90,3 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #footer .footer_menu ul li a span.home_img.on{background-position:-13px -124px;}
 #footer .footer_menu ul li a span.report_img.on{background-position:-47px -124px;}
 
-#modal_office.in .modal-dialog{position:absolute; bottom:0; width:100%; margin:0;
--webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    -o-transform: translate(0,0);
-    transform: translate(0,0);
-}
-
-.animate-bottom {
-  position: relative;
-  animation: animatebottom 0.4s;
-}
-@keyframes animatebottom {
-  from {
-    bottom: -300px;
-    opacity: 0;
-  }
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
-}
-
