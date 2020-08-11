@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+		<title>부트스트랩 101 템플릿</title>
+
+		<!-- 부트스트랩 -->
+		<link rel="stylesheet" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="../css/default.css">
+		<link rel="stylesheet" href="../css/owl.carousel.css">
+		<link rel="stylesheet" href="../css/owl.theme.default.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+		<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+		<script src="../js/bootstrap.min.js"></script>
+		<!--<script src="js/jquery.min.js"></script>-->
+		<script src="../js/owl.carousel.js"></script>
+		<script type="text/javascript" src="../js/jquery.iwtInputClearButtonController-0.9.0.js"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="common">
+				<div class="mypage">
+					<div class="back_btn">
+						<p><a href="javascript:history.back();">우리회사 찾기 / 등록</a></p>
+					</div>
+					<div id="com_page">
+						<div class="map">
+							<div class="search_area">
+								<div class="search_form">
+									<input type="search" name="keyword" class="form_box form-control" id="map_search" placeholder="검색어 입력">
+									<button class="txt_clear btn form-control-clear">지우기</button>
+									<p class="consult">검색을 허용하지 않은 일부 고객사는 표시되지 않을 수 있습니다.</p>
+								</div>
+							</div>
+							<div class="search_result">
+								<h2 class="tit">검색결과</h2>
+								<div class="result_area">
+									<div class="result_list">
+										<div class="result">
+											<h4 class="com_name">GS건설 본사</h4>
+											<p class="com_address">서울특별시 강남구 논현로 508 GS타워</p>
+										</div>
+										<div class="result_btn">
+											<p class="com_locat"><a href="#locat_map1" data-toggle="collapse" aria-expanded="false" aria-controls="locat_map1">위치</a></p>
+											<p class="com_acc"><a href="#">등록</a></p>
+										</div>
+										<div class="locat_map collapse" id="locat_map1">
+											<p><img src="../images/map_img.jpg"/></p>
+										</div>
+									</div>
+									<div class="result_list">
+										<div class="result">
+											<h4 class="com_name">GS건설 본사</h4>
+											<p class="com_address">서울특별시 강남구 논현로 508 GS타워</p>
+										</div>
+										<div class="result_btn">
+											<p class="com_locat"><a href="#locat_map2" data-toggle="collapse" aria-expanded="false" aria-controls="locat_map2">위치</a></p>
+											<p class="com_acc on"><a href="#">해제</a></p>
+										</div>
+										<div class="locat_map collapse" id="locat_map2">
+											<p><img src="../images/map_img.jpg"/></p>
+										</div>
+									</div>
+									<div class="result_list">
+										<div class="result">
+											<h4 class="com_name">GS건설 본사</h4>
+											<p class="com_address">서울특별시 강남구 논현로 508 GS타워</p>
+										</div>
+										<div class="result_btn">
+											<p class="com_locat"><a href="#locat_map3" data-toggle="collapse" aria-expanded="false" aria-controls="locat_map3">위치</a></p>
+											<p class="com_acc"><a href="#">등록</a></p>
+										</div>
+										<div class="locat_map collapse" id="locat_map3">
+											<p><img src="../images/map_img.jpg"/></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function() {
+				$('.has-clear input[name="keyword"]').on('input propertychange', function() {
+					var $this = $(this);
+					var visible = Boolean($this.val());
+					$this.siblings('.form-control-clear').toggleClass('hidden', !visible);
+				}).trigger('propertychange');
+				$('.form-control-clear').click(function() {
+					$(this).siblings('input[name="keyword"]').val('')
+						.trigger('propertychange').focus();
+				});
+			})
+		</script>
+	</body>
+</html>

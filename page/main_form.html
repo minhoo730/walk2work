@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+		<title>부트스트랩 101 템플릿</title>
+
+		<!-- 부트스트랩 -->
+		<link rel="stylesheet" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="../css/default.css">
+		<link rel="stylesheet" href="../css/owl.carousel.css">
+		<link rel="stylesheet" href="../css/owl.theme.default.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+		<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+		<script src="../js/bootstrap.min.js"></script>
+		<!--<script src="js/jquery.min.js"></script>-->
+		<script src="../js/owl.carousel.js"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="app_form">
+				<div class="app_area">
+					<div class="close_btn">
+						<p><a href="javascript:WinClose();">close</a></p>
+					</div>
+					<div class="app_title">
+						<h1>
+							<span class="form_img"><img src="../images/ico-pen.png"/></span>
+							방문신청정보 작성
+						</h1>
+						<p>엔로비 고객사에 방문신청시<br>자동입력되는 항목입니다.</p>
+					</div>
+					<div class="form_label">
+						<p class="label_list has-clear">
+							<label class="label needed" for="label_name">이름</label>
+							<input type="text" name="keyword" class="form_box form-control" id="label_name" placeholder="이름">
+							<button class="txt_clear btn form-control-clear">지우기</button>
+							<span class="invalid">이름을 입력해주세요.</span>
+						</p>
+						<p class="label_list">
+							<label class="label needed" for="label_div">소속</label>
+							<input type="text" name="keyword" class="form_box form-control" id="label_div" placeholder="소속">
+							<button class="txt_clear btn">지우기</button>
+							<span class="invalid">소속을 입력해주세요.</span>
+						</p>
+						<p class="label_list">
+							<label class="label needed" for="label_pos">직책</label>
+							<input type="text" name="keyword" class="form_box form-control" id="label_pos" placeholder="직책">
+							<button class="txt_clear btn form-control-clear">지우기</button>
+							<span class="invalid">직책을 입력해주세요.</span>
+						</p>
+						<p class="label_list">
+							<label class="label needed" for="label_phone">휴대전화</label>
+							<input type="tel" name="keyword" class="form_box form-control" id="label_phone" placeholder="휴대전화">
+							<button class="txt_clear btn form-control-clear">지우기</button>
+							<span class="invalid">휴대전화번호를 확인하십시오.</span>
+						</p>
+						<p class="label_list">
+							<label class="label" for="label_car">차량번호</label>
+							<input type="text" name="keyword" class="form_box form-control" id="label_car">
+							<button class="txt_clear btn form-control-clear">지우기</button>
+						</p>
+						<p class="label_list">
+							<label class="label" for="label_email">이메일</label>
+							<input type="email" name="keyword" class="form_box form-control" id="label_email">
+							<button class="txt_clear btn form-control-clear">지우기</button>
+						</p>
+					</div>
+				</div>
+				<div class="form_service">
+					<div class="all_service">
+						<p>
+							<input type="checkbox" id="all_check">
+							<label class="label" for="all_check">약관 전체동의</label>
+							<button class="down">down</button>
+						</p>
+					</div>
+					<div class="agr">
+						<p>
+							<input type="checkbox" id="sub_check1" class="nurmal_chk">
+							<label class="sub_label" for="sub_check1"><a data-toggle="modal" data-target="#trust_modal">개인정보 위탁에 관한 사항 (필수)</a></label>
+						</p>
+						<p>
+							<input type="checkbox" id="sub_check2" class="nurmal_chk">
+							<label class="sub_label" for="sub_check2"><a data-toggle="modal" data-target="#object_modal">개인정보 수집항목 및 이용목적 (필수)</a></label>
+						</p>
+						<p>
+							<input type="checkbox" id="sub_check3" class="nurmal_chk">
+							<label class="sub_label" for="sub_check3"><a data-toggle="modal" data-target="#person_modal">개인정보의 제3자 제공에 관한 사항 (필수)</a></label>
+						</p>
+					</div>
+					<button class="btn form_com" onclick="location.href='../page/form_comple.html';">작성완료</button>
+					<button class="btn form_com" disabled>작성완료</button>
+				</div>
+			</div>
+
+			<div class="modal fade trust_modal" id="trust_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+						</div>
+						<div class="modal-body">
+						...
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade object_modal" id="object_modal" tabindex="-1" role="dialog" aria-hidden="true">
+			</div>
+			<div class="modal fade person_modal" id="person_modal" tabindex="-1" role="dialog" aria-hidden="true">
+			</div>
+		</div>
+
+		<!--  첫 화면 방문신청정보 작성 폼 -->
+		<script>
+				// 체크박스 전체 선택
+				$(".form_service").on("click", "#all_check", function () {
+					$(this).parents(".form_service").find('input').prop("checked", $(this).is(":checked"));
+				});
+				// 체크박스 개별 선택
+				$(".form_service").on("click", ".nurmal_chk", function() {
+					var is_checked = true;
+					$(".form_service .nurmal_chk").each(function(){
+						is_checked = is_checked && $(this).is(":checked");
+					});
+					$("#all_check").prop("checked", is_checked);
+				});
+
+				// 삭제 버튼 클릭시 텍스트 제거 스크립트
+				$('.has-clear input[name="keyword"]').on('input propertychange', function() {
+					var $this = $(this);
+					var visible = Boolean($this.val());
+					$this.siblings('.form-control-clear').toggleClass('hidden', !visible);
+				}).trigger('propertychange');
+				$('.form-control-clear').click(function() {
+					$(this).siblings('input[name="keyword"]').val('')
+						.trigger('propertychange').focus();
+				});
+		</script>
+	</body>
+</html>

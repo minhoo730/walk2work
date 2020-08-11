@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+		<title>부트스트랩 101 템플릿</title>
+
+		<!-- 부트스트랩 -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/default.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/owl.theme.default.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+		<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!--<script src="js/jquery.min.js"></script>-->
+		<script type="text/javascript" src="js/owl.carousel.js"></script>
+		<script type="text/javascript" src="js/jquery.iwtInputClearButtonController-0.9.0.js"></script>
+		<!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+		<!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<div class="logo">
+					<a href="/nlobby_webapp"><img src="images/logo.png"/></a>
+				</div>
+				<div class="nav">
+					<div class="war_ico">
+						<p class="camera_ico">카메라</p>
+						<p class="mic_ico">마이크</p>
+					</div>
+					<div class="nav_ico">
+						<ul>
+							<!--<li><a href="#">알람</a></li>-->
+							<li class="ico_reserve"><a href="https://demo.nlobby.com/dash/login">방문예약</a></li>
+							<li class="ico_my"><a href="page/mypage.html">마이페이지</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>	
+			<div id="content">
+				<div class="apply">
+					<div class="row">
+						<div class="apply_area col-6">
+							<h2 class="tit">방문신청</h2>
+							<p class="apply_btn"><a href="page/map.html">방문장소 검색</a></p>
+						</div>
+						<div class="location_area col-6">
+							<div class="no_data">
+								<p class="no_txt">주변에 방문신청<br>가능한 곳이 없습니다.</p>
+							</div>
+							<!--
+							<div class="location_area">
+								<p>현재 가까운 곳에 있습니다.</p>
+								<div class="data_area">
+								</div>
+							</div>
+							-->
+						</div>
+					</div>
+				</div>
+				<div class="bookmark">
+					<div class="bookmark_area">
+						<h2 class="tit">즐겨찾기</h2>
+						<div class="list_area">
+							<div class="no_data">
+								<p class="no_txt">즐겨찾기가 등록되지 않았습니다.<br>
+								최근 방문 리스트에서 ★버튼을 눌러서 추가 해 주세요.</p>
+							</div>
+						</div>
+						<script>
+							$(document).ready(function() {
+								$('.owl-carousel').owlCarousel({
+									loop: false,
+									center: true,
+									items: 2,
+									margin: 10,
+									responsiveClass: false,
+									startPosition:0,
+									/*
+									autoplay:false,
+									autoplayTimeout:5000,
+									autoplayHoverPause:false,
+									*/
+									touchDrag:true,
+									//navText: ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+										responsive: {
+										0: {
+											items: 2,
+											nav: false
+										},
+										600: {
+											items: 2,
+											nav: false
+										},
+										1000: {
+											items: 2,
+											nav: false
+										}
+									}
+								})
+							})
+						</script>
+					</div>
+				</div>
+				<div class="last_list">
+					<h2 class="tit">최근 방문장소</h2>
+					<div class="no_data">
+						<p class="no_txt">최근 방문한 장소가 없습니다.</p>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<div class="footer_img"><p><img src="images/logo-copy.png"/></p></div>
+				<div class="footer_menu">
+					<p><a href="#">이용약관</a></p>
+					<p><a href="#">개인정보 이용방침</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
