@@ -2,7 +2,7 @@
 @import url(https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/stylesheets/NotoSansKR-Hestia.css);
 
 html {overflow-y:scroll; height:100%; min-width:320px; max-width:768px; margin:0 auto;}
-body {margin:0; padding:0; font-size:1.2em; background:#fff; height:100%; font-family: 'Noto Sans Korean', sans-serif;}
+body {margin:0; padding:0; font-size:1.2em; letter-spacing:-1px; background:#fff; height:100%; font-family: 'Noto Sans Korean', sans-serif;}
 h1, h2, h3, h4, h5, h6, form, fieldset, img, label {margin:0; padding:0; border:0}
 h1, h2, h3, h4, h5, h6 {font-size:1em; font-family: 'Noto Sans Korean', sans-serif;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
@@ -15,7 +15,7 @@ textarea, select {font-size:1em; font-family: 'Noto Sans Korean', sans-serif;}
 textarea {border-radius:0;-webkit-appearance:none; font-family: 'Noto Sans Korean', sans-serif;}
 select {margin:0;background:none; font-family: 'Noto Sans Korean', sans-serif;}
 a {color:#333; text-decoration:none !important;}
-p {margin:0;padding:0;word-break:break-all}
+p {margin:0;padding:0;word-break:break-all;}
 hr {display:none}
 pre {overflow-x:scroll; font-size:1.1em}
 ul,li,dl,dt,dd {padding:0;margin:0}
@@ -40,35 +40,55 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #wrap .splashy_bot p img{width:60%;}
 
 /* 메인페이지 header */
-#header{max-width:768px; width:100%; height:80px; position:relative; padding:15px; background:#849c23; z-index:999; top:0; color:#fff; text-align:center;}
+#header{max-width:768px; width:100%; height:80px; position:relative; padding:15px; background:#fff; z-index:999; top:0; text-align:center; box-shadow: 1.1px 1.6px 20px 0 rgba(0, 0, 0, 0.2);}
+#header .logo{display:table; height:100%; width:100%; margin:0 auto;}
+#header .logo p{display:table-cell; vertical-align:middle;}
 #header:after{display:block; content:''; clear:both;}
 
+
+
 #content .map{position:relative;}
-#content .map .map_info{position:absolute; width:90%; background:rgba(255,255,255, 0.9); left:5%; top:5%; margin-left:0px; border-radius:5px; padding:15px;}
-#content .map .map_info h2{font-size:1.8em; font-weight:400; margin-bottom:5px;}
-#content .map .map_info p{font-size:1.6em; font-weight:500;}
+#content .map .map_info{position:absolute; width:90%; background:rgba(255,255,255, 0.9); left:5%; top:5%; margin-left:0px; border-radius:5px; padding:15px; box-shadow: 0.6px 0.8px 20px 0 rgba(0, 0, 0, 0.25);}
+#content .map .map_info h2.map_name{font-size:1.8em; font-weight:400; margin-bottom:5px;}
+#content .map .map_info p.address{font-size:1.4em; font-weight:500; position:relative; padding-left:20px;}
+#content .map .map_info p.address:before{position:absolute; content:''; background:url('../images/common_ico.png')no-repeat; width:20px; height:25px; background-position:-15px -203px; background-size:250px; left:0;}
+
 #content .work > div{border-bottom:1px solid #d9d9d9;}
 #content .current_time{padding:10px 20px;}
-#content .current_time p{font-size:1.4em;}
-#content .current_time p.current_txt{float:left; font-weight:400;}
+#content .current_time p{font-size:1.4em; position:relative;}
+#content .current_time p.current_txt:before{position:absolute; content:''; background:url('../images/common_ico.png')no-repeat; width:25px; height:25px; left:0;}
+#content .current_time p.current_txt{float:left; font-weight:400; padding-left:30px;}
 #content .current_time p.time{float:right; font-weight:500;}
 #content .current_time:after{display:block; content:''; clear:both;}
+
+#content .now_time p.current_txt:before{background-position: -46px -69px; background-size:250px;}
 
 /* 메뉴 3개*/
 /* #content .work_btn p{display:inline-block; width:32.33%; text-align:center;} */
 
 /* 메뉴 2개*/
 #content .work_btn p{display:inline-block; width:49.5%; text-align:center;}
-#content .work_btn p a{font-size:1.4em; color:#849c23;}
+#content .work_btn p a{font-size:1.4em; width:100%; height:100%; color:#849c23; position:relative; padding:20px 0; display:inline-block;}
+#content .work_btn p a img{display:block; margin:0 auto; margin-bottom:10px;}
 
-#content .adm_modify p.modify_btn{width:100%; font-size:1.4em;}
+#content .adm_modify p.modify_btn{width:100%; font-size:1.4em; padding:10px 20px;}
 #content .adm_modify p.modify_btn a{width:100%; font-weight:500; color:#333;}
 
-#content .work_btn p a{width:100%;}
+#content .commute_info {background:#f9f9f9;}
+#content .commute_info .current_time p.in_time:before{background-position: -156px -68px; background-size:250px;}
+#content .commute_info .current_time p.out_time:before{background-position: -190px -68px; background-size:250px;}
+#content .commute_info .total_time p.current_txt:before{background-position: -85px -68px; background-size:250px;}
 
-#footer{padding:0 15px; background:#e9e9e9;}
+#footer{background:#e9e9e9;}
 #footer .footer_menu ul li{display:inline-block; width:49.5%; text-align:center;}
-#footer .footer_menu ul li a{color:#333; width:100%; font-size:1.4em;}
+#footer .footer_menu ul li:first-child{border-right:1px solid #d9d9d9;}
+#footer .footer_menu ul li a{color:#333; width:100%; font-size:1.4em; position:relative; padding:10px 0; display:block;}
+#footer .footer_menu ul li a span{background:url('../images/common_ico.png')no-repeat; width:25px; height:25px; background-size:200px; text-indent:-9999px; margin:0 auto; display:block; margin-bottom:5px;}
+#footer .footer_menu ul li a span.home_img{background-position:-13px -83px;}
+#footer .footer_menu ul li a span.report_img{background-position:-47px -83px;}
+
+#footer .footer_menu ul li a span.home_img.on{background-position:-13px -124px;}
+#footer .footer_menu ul li a span.report_img.on{background-position:-47px -124px;}
 
 #modal_office.in .modal-dialog{position:absolute; bottom:0; width:100%; margin:0;
 -webkit-transform: translate(0,0);
