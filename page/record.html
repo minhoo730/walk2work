@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+		<title>Walk2Work</title>
+
+		<!-- 부트스트랩 -->
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/default.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<div class="logo">
+					<p><span class="logo_img"><img src="../images/logo.png"/></span></p>
+				</div>
+			</div>	
+			<div id="sub_content">
+				<div class="report">
+					<div class="report_tit">
+						<h2><span class="name">엔로비</span>님의 출퇴근 기록입니다.</h2>
+						<div class="calendar">
+							<!--<p><a href="#">2020.08</a></p>-->
+							<p><input id="calendar" class="calendar" placeholder="2020. 08"/></p>
+						</div>
+					</div>
+					<div class="month_report">
+						<p>이번 달 총 근무일수<br><span class="mon_data">8일</span></p>
+						<p>이번 달 총 근무시간<br><span class="mon_data">64시간 30분</span></p>
+					</div>
+					<div class="report_data">
+						<div class="re_list">
+							<div class="list_tit">
+								<p class="list_data">2020년 8월 3일</p>
+								<p class="list_time">09시간 00분</p>
+							</div>
+							<div class="list_detail">
+								<div class="work_time">
+									<p class="start_time">AM 09:00</p>
+									<p class="end_time">PM 06:00</p>
+								</div>
+								<div class="list_location">
+									<p class="start_location">부산 엔로비 본사</p>
+									<p class="end_location">부산 엔로비 본사</p>
+								</div>
+								<div class="list_button">
+									<button class="mon_modify">변경요청</button>
+								</div>
+							</div>
+						</div>
+						<div class="re_list">
+							<div class="list_tit">
+								<p class="list_data">2020년 8월 4일</p>
+								<p class="list_time">09시간 00분</p>
+							</div>
+							<div class="list_detail">
+								<div class="work_time">
+									<p class="start_time">AM 09:00</p>
+									<p class="end_time">PM 06:00</p>
+								</div>
+								<div class="list_location">
+									<p class="start_location">부산 엔로비 본사</p>
+									<p class="end_location">부산 엔로비 본사</p>
+								</div>
+								<div class="list_button">
+									<button class="mon_modify">변경요청</button>
+								</div>
+							</div>
+						</div>
+						<div class="re_list">
+							<div class="list_tit">
+								<p class="list_data">2020년 8월 5일</p>
+								<p class="list_time">09시간 00분</p>
+							</div>
+							<div class="list_detail">
+								<div class="work_time">
+									<p class="start_time">AM 09:00</p>
+									<p class="end_time">PM 06:00</p>
+								</div>
+								<div class="list_location">
+									<p class="start_location">부산 엔로비 본사</p>
+									<p class="end_location">부산 엔로비 본사</p>
+								</div>
+								<div class="list_button">
+									<button class="mon_modify">변경요청</button>
+								</div>
+							</div>
+						</div>
+						<div class="re_list">
+							<div class="list_tit">
+								<p class="list_data">2020년 8월 6일</p>
+								<p class="list_time">09시간 00분</p>
+							</div>
+							<div class="list_detail">
+								<div class="work_time">
+									<p class="start_time">AM 09:00</p>
+									<p class="end_time">PM 06:00</p>
+								</div>
+								<div class="list_location">
+									<p class="start_location">부산 엔로비 본사</p>
+									<p class="end_location">부산 엔로비 본사</p>
+								</div>
+								<div class="list_button">
+									<button class="mon_modify">변경요청</button>
+								</div>
+							</div>
+						</div>
+						<div class="re_list">
+							<div class="list_tit">
+								<p class="list_data">2020년 8월 7일</p>
+								<p class="list_time">09시간 00분</p>
+							</div>
+							<div class="list_detail">
+								<div class="work_time">
+									<p class="start_time">AM 09:00</p>
+									<p class="end_time">PM 06:00</p>
+								</div>
+								<div class="list_location">
+									<p class="start_location">부산 엔로비 본사</p>
+									<p class="end_location">부산 엔로비 본사</p>
+								</div>
+								<div class="list_button">
+									<button class="mon_modify">변경요청</button>
+								</div>
+							</div>
+						</div>
+						<div class="re_list">
+							<div class="list_tit">
+								<p class="list_data">2020년 8월 8일</p>
+								<p class="list_time">09시간 00분</p>
+							</div>
+							<div class="list_detail">
+								<div class="work_time">
+									<p class="start_time">AM 09:00</p>
+									<p class="end_time">PM 06:00</p>
+								</div>
+								<div class="list_location">
+									<p class="start_location">부산 엔로비 본사</p>
+									<p class="end_location">부산 엔로비 본사</p>
+								</div>
+								<div class="list_button">
+									<button class="mon_modify">변경요청</button>
+								</div>
+							</div>
+						</div>
+						<div class="re_list">
+							<div class="list_tit">
+								<p class="list_data">2020년 8월 9일</p>
+								<p class="list_time">09시간 00분</p>
+							</div>
+							<div class="list_detail">
+								<div class="work_time">
+									<p class="start_time">AM 09:00</p>
+									<p class="end_time">PM 06:00</p>
+								</div>
+								<div class="list_location">
+									<p class="start_location">부산 엔로비 본사</p>
+									<p class="end_location">부산 엔로비 본사</p>
+								</div>
+								<div class="list_button">
+									<button class="mon_modify">변경요청</button>
+								</div>
+							</div>
+						</div>
+						<div class="re_list">
+							<div class="list_tit">
+								<p class="list_data">2020년 8월 10일</p>
+								<p class="list_time">09시간 00분</p>
+							</div>
+							<div class="list_detail">
+								<div class="work_time">
+									<p class="start_time">AM 09:00</p>
+									<p class="end_time">PM 06:00</p>
+								</div>
+								<div class="list_location">
+									<p class="start_location">부산 엔로비 본사</p>
+									<p class="end_location">부산 엔로비 본사</p>
+								</div>
+								<div class="list_button">
+									<button class="mon_modify">변경요청</button>
+								</div>
+							</div>
+						</div>
+						<div class="re_list">
+							<div class="list_tit">
+								<p class="list_data">2020년 8월 1일</p>
+								<p class="list_time">09시간 00분</p>
+							</div>
+							<div class="list_detail">
+								<div class="work_time">
+									<p class="start_time">AM 09:00</p>
+									<p class="end_time">PM 06:00</p>
+								</div>
+								<div class="list_location">
+									<p class="start_location">부산 엔로비 본사</p>
+									<p class="end_location">부산 엔로비 본사</p>
+								</div>
+								<div class="list_button">
+									<button class="mon_modify">변경요청</button>
+								</div>
+							</div>
+						</div>
+						<div class="re_list">
+							<div class="list_tit">
+								<p class="list_data">2020년 8월 1일</p>
+								<p class="list_time">09시간 00분</p>
+							</div>
+							<div class="list_detail">
+								<div class="work_time">
+									<p class="start_time">AM 09:00</p>
+									<p class="end_time">PM 06:00</p>
+								</div>
+								<div class="list_location">
+									<p class="start_location">부산 엔로비 본사</p>
+									<p class="end_location">부산 엔로비 본사</p>
+								</div>
+								<div class="list_button">
+									<button class="mon_modify">변경요청</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<div class="footer_menu">
+					<ul>
+						<li class="home_ico"><a href="../index.html"><span class="home_img">홈 이미지</span>홈</a></li>
+						<li class="report_ico on"><a href="../page/record.html"><span class="report_img">출퇴근기록</span>출퇴근기록</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="modal_modify" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">근태 기록변경 요청</h4>
+					</div>
+					<div class="modal-body">
+						<p>현재 시간은 <span class="green">오전 09:00</span> 입니다.<br>출근하시겠습니까?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button">출근하기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="../js/monthpicker.js"></script>
+		<script>
+			$('#calendar').Monthpicker({
+				monthLabels: ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]
+			});
+		</script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.iwtInputClearButtonController-0.9.0.js"></script>
+	</body>
+</html>
