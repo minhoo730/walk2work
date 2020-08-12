@@ -55,14 +55,14 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 
 
 /* 메인페이지 header */
-#header{max-width:768px; width:100%; height:50px; position:relative; padding:10px; background:#fff; z-index:999; top:0; text-align:center; box-shadow: 1.1px 1.6px 10px 0 rgba(0, 0, 0, 0.2);}
+#header{max-width:768px; width:100%; height:50px; position:fixed; padding:10px; background:#fff; z-index:999; top:0; text-align:center; box-shadow: 1.1px 1.6px 10px 0 rgba(0, 0, 0, 0.2);}
 #header .logo{display:table; height:100%; width:100%; margin:0 auto;}
 #header .logo p{display:table-cell; vertical-align:middle;}
 #header .logo p span.logo_img{display:inline-block; width:40px;}
 #header .logo p span.logo_img img{width:100%;}
 #header:after{display:block; content:''; clear:both;}
 
-#content{padding-bottom:73px;}
+#content{padding-bottom:73px; padding-top:50px;}
 #content .map{position:relative;}
 #content .map .map_info{position:absolute; width:90%; background:rgba(255,255,255, 0.9); left:5%; top:5%; margin-left:0px; border-radius:5px; padding:15px; box-shadow: 0.6px 0.8px 20px 0 rgba(0, 0, 0, 0.25);}
 #content .map .map_info h2.map_name{font-size:1.8em; font-weight:400; margin-bottom:5px;}
@@ -99,7 +99,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 
 
 /* subpage */
-#sub_content{padding-bottom:73px;}
+#sub_content{padding-bottom:73px; padding-top:50px;}
 #sub_content .report_tit{padding:25px 20px; border-bottom:1px solid #849c23;}
 #sub_content .report_tit h2{font-size:1.8em; color:#333; font-weight:400;}
 #sub_content .report_tit h2 span.name{color:#849c23; font-weight:500;}
