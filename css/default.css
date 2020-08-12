@@ -55,7 +55,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 
 
 /* 메인페이지 header */
-#header{max-width:768px; width:100%; height:50px; position:fixed;padding:10px; background:#fff; z-index:999; top:0; text-align:center; box-shadow: 1.1px 1.6px 10px 0 rgba(0, 0, 0, 0.2);}
+#header{max-width:768px; width:100%; height:50px; position:fixed; padding:10px; background:#fff; z-index:999; top:0; text-align:center; box-shadow: 1.1px 1.6px 10px 0 rgba(0, 0, 0, 0.2);}
 #header .logo{display:table; height:100%; width:100%; margin:0 auto;}
 #header .logo p{display:table-cell; vertical-align:middle;}
 #header .logo p span.logo_img{display:inline-block; width:40px;}
@@ -111,7 +111,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #sub_content .month_report p{padding:25px 20px; font-size:1.4em; color:#333; font-weight:400; float:left; width:50%; padding-right:0px;}
 #sub_content .month_report p:first-child{border-right:1px solid #d9d9d9;}
 #sub_content .month_report p:last-child{border-right:none; padding-left:20px;}
-#sub_content .month_report p span{font-weight:500; color:#849c23;}
+#sub_content .month_report p span{font-weight:500; color:#849c23; font-size:1.3em;}
 #sub_content .re_list{border-top:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; border-left:0; border-right:0; margin-bottom:20px;}
 #sub_content .re_list .list_tit{font-size:1.4em; font-weight:400; background:#ededed; border-bottom:1px solid #d9d9d9;}
 #sub_content .re_list .list_tit p{padding:10px 20px;}
@@ -127,7 +127,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #sub_content .list_location{margin-left:10px; float:left;}
 #sub_content .list_location p{font-size:1.4em; color:#333; font-weight:500;}
 #sub_content .list_location p.end_location{color:#9a9a9a; padding-top:5px;}
-#sub_content .list_button{float:right; padding-top:19px;}
+#sub_content .list_button{float:right; padding:10px 0;}
 #sub_content .list_button button{border-radius:0; border:1px solid #849c23; color:#849c23; background:#fff; padding:5px 10px; font-size:1.2em;}
 
 
