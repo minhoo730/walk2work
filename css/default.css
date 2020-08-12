@@ -41,16 +41,17 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 
 /* 휴대전화번호 입력 페이지 */
 #in_content{display:table; width:100%; height:100%; margin:0 auto; text-align:center;}
-#in_content .phone_area{display:table-cell; vertical-align:middle; padding-left:20px; padding-right:20px;}
+#in_content .form_area{display:table-cell; vertical-align:middle; padding-left:20px; padding-right:20px;}
 #in_content .p_page{width:100%; margin:0 auto;}
 #in_content .p_page h2{font-size:1.5em; font-weight:400; line-height:1.5em;}
 #in_content .p_page h2 span.phone_img{text-indent:-9999px; position:relative; width:160px; height:160px; display:block; margin:0 auto; background:url('../images/phone.png')no-repeat; background-size:160px;}
+#in_content .p_page h2 span.form_img{text-indent:-9999px; position:relative; width:160px; height:160px; display:block; margin:0 auto; background:url('../images/login.png')no-repeat; background-size:160px;}
 #in_content .p_page h2 span.green{font-weight:500; color:#849c23;}
 #in_content .p_page .label_list{margin-top:50px;}
-#in_content .p_page .label_list input.phone_form{width:100%; border:none; border-bottom:1px solid #d9d9d9; font-size:1.5em; padding:5px; color:#333;}
-#in_content .phone_area p.invalid{text-align:left; display:block; font-size:1.3em; color:#ff0000; margin-top:5px;}
+#in_content .p_page .label_list input.phone_form{width:100%; border:none; border-bottom:1px solid #d9d9d9; font-size:1.5em; padding:10px; color:#333;}
+#in_content .form_area p.invalid{text-align:left; display:block; font-size:1.3em; color:#ff0000; margin-top:5px;}
 #in_content .work_btn{position:fixed; bottom:0; left:0; width:100%;}
-.work_com{width: 100%; background: #849c23; color: #fff; font-size: 1.5em; border: none; border-radius: 0; padding: 15px;}
+.work_com{width: 100%; background: #849c23; color: #fff; font-size: 1.5em; border: none; border-radius: 0; padding: 15px; display:block;}
 
 
 /* 메인페이지 header */
