@@ -84,7 +84,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 /* subpage */
 #sub_content{padding-bottom:73px;}
 #sub_content .report_tit{padding:25px 20px; border-bottom:1px solid #849c23;}
-#sub_content .report_tit h2{font-size:1.5em; color:#333; font-weight:400;}
+#sub_content .report_tit h2{font-size:1.8em; color:#333; font-weight:400;}
 #sub_content .report_tit h2 span.name{color:#849c23; font-weight:500;}
 #sub_content .report_tit p{position:relative; padding-left:30px; margin-top:10px;	}
 #sub_content .report_tit p:before{position:absolute; content:''; width:22px; height:22px; background:url('../images/common_ico.png')no-repeat; background-size:200px; background-position:-35px -158px; left:0; top:0;}
@@ -112,6 +112,9 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #sub_content .list_button{float:right; padding-top:19px;}
 #sub_content .list_button button{border-radius:0; border:1px solid #849c23; color:#849c23; background:#fff; padding:5px 10px; font-size:1.2em;}
 
+
+
+
 #footer{background:#e9e9e9; width:100%; max-width:768px; position:fixed; bottom:0;}
 #footer .footer_menu ul:after{display:block; content:''; clear:both;}
 #footer .footer_menu ul li{float:left; width:50%; text-align:center;}
@@ -125,6 +128,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #footer .footer_menu ul li.on a span.home_img{background-position:-13px -124px;}
 #footer .footer_menu ul li.on a span.report_img{background-position:-47px -124px;}
 
+
 #modal_in .modal-dialog{position:absolute; bottom:0; margin:0; width:100%;}
 #modal_in .modal-dialog .modal-content{border-radius:0; border:none;}
 #modal_in .modal-dialog .modal-header button{position:absolute; left:15px; font-size:2.0em; color:#849c23; text-shadow:none; opacity:1; font-weight:400;}
@@ -134,3 +138,29 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #modal_in .modal-body p span.green{color:#849c23; font-weight:500;}
 #modal_in .modal-footer{padding:0;}
 #modal_in .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
+
+
+#mon_modify{padding-right:0 !important;}
+#mon_modify .modal-dialog{margin:0 auto; overflow:hidden; width:100%; height:100%; max-width:768px;}
+#mon_modify .modal-content{border-radius:0; height:100%; border:none;}
+#mon_modify .modal-dialog .modal-header button{position:absolute; left:15px; font-size:2.0em; color:#849c23; text-shadow:none; opacity:1; font-weight:400;}
+#mon_modify .modal-dialog .modal-header h4{text-align:center; font-size:1.6em; font-weight:500;}
+#mon_modify .now_info{border-bottom:1px solid #d9d9d9; padding-bottom:20px;}
+#mon_modify .now_info .now:after{display:block; content:''; clear:both;}
+#mon_modify .now_info p{font-size:1.4em;	color:#333;}
+#mon_modify .now_info .calendar p{text-align:center;}
+#mon_modify .now_info .now{margin:10px 0;}
+#mon_modify .now_info .now:last-child{margin:0;}
+#mon_modify .now_info .now p.txt_left{float:left;}
+#mon_modify .now_info .now p.txt_right{float:right; text-align:right; line-height:1.1em;}
+
+#mon_modify .now_info .now p.txt_right span.modal_time{font-size:0.8em; color:#bbbbbb; font-weight:500;}
+
+#mon_modify .work_form{padding-top:20px;}
+#mon_modify .work_form h2{font-size:1.5em;}
+
+
+#mon_modify .modal-footer{padding:0; overflow:hidden; position:absolute; bottom:0; text-align:center; width:100%;}
+#mon_modify .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
+
+
