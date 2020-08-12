@@ -55,7 +55,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 
 
 /* 메인페이지 header */
-#header{max-width:768px; width:100%; height:50px; position:fixed; padding:10px; background:#fff; z-index:999; top:0; text-align:center; box-shadow: 1.1px 1.6px 10px 0 rgba(0, 0, 0, 0.2);}
+#header{max-width:768px; width:100%; height:50px; position:fixed;padding:10px; background:#fff; z-index:999; top:0; text-align:center; box-shadow: 1.1px 1.6px 10px 0 rgba(0, 0, 0, 0.2);}
 #header .logo{display:table; height:100%; width:100%; margin:0 auto;}
 #header .logo p{display:table-cell; vertical-align:middle;}
 #header .logo p span.logo_img{display:inline-block; width:40px;}
