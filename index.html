@@ -92,70 +92,68 @@
 
 		<!-- 근태기록 수정 모달 -->
 		<div class="modal" id="mon_modify" backdrop="static" tabindex="-1">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">근태 기록변경 요청</h4>
-					</div>
-					<div class="modal-body">
-						<div class="modal-wrap">
-							<div class="now_info">
-								<div class="calendar">
-									<p><a href="#">2020.08.12 수요일</a></p>
-									<!--<p><input id="calendar" class="calendar" placeholder="2020. 08"/></p>-->
-								</div>
-								<div class="now">
-									<p class="txt_left">현 근무시간</p>
-									<p class="txt_right">9시간 00분<br><span class="modal_time">AM 09:00 - PM 06:00</span></p>
-								</div>
-								<div class="now">
-									<p class="txt_left">현 근무장소</p>
-									<p class="txt_right">서울 넷마블 본사</p>
-								</div>
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">근태 기록변경 요청</h4>
+				</div>
+				<div class="modal-body">
+					<div class="modal-wrap">
+						<div class="now_info">
+							<div class="calendar">
+								<p><a href="#">2020.08.12 수요일</a></p>
+								<!--<p><input id="calendar" class="calendar" placeholder="2020. 08"/></p>-->
 							</div>
-							<div class="work_form">
-								<h2>근태수정</h2>
-								<div class="work_modify">
-									<div class="label_list">
-										<div class="label_form">
-											<label class="label needed" for="work_on">출근</label>
-											<input type="time" name="keyword" class="form_box form-control" id="work_on" placeholder="출근시간 입력">
-											<button class="txt_clear btn">지우기</button>
-										</div>
-										<p class="invalid">출근시간을 입력 해 주세요.</p>
+							<div class="now">
+								<p class="txt_left">현 근무시간</p>
+								<p class="txt_right">9시간 00분<br><span class="modal_time">AM 09:00 - PM 06:00</span></p>
+							</div>
+							<div class="now">
+								<p class="txt_left">현 근무장소</p>
+								<p class="txt_right">서울 넷마블 본사</p>
+							</div>
+						</div>
+						<div class="work_form">
+							<h2>근태수정</h2>
+							<div class="work_modify">
+								<div class="label_list">
+									<div class="label_form">
+										<label class="label needed" for="work_on">출근</label>
+										<input type="time" name="keyword" class="form_box form-control" id="work_on" placeholder="출근시간 입력">
+										<button class="txt_clear btn">지우기</button>
 									</div>
-									<div class="label_list">
-										<div class="label_form">
-											<label class="label needed" for="work_off">퇴근</label>
-											<input type="time" name="keyword" class="form_box form-control" id="work_off" placeholder="퇴근시간 입력">
-											<button class="txt_clear btn">지우기</button>
-										</div>
-										<p class="invalid">퇴근시간을 입력 해 주세요.</p>
+									<p class="invalid">출근시간을 입력 해 주세요.</p>
+								</div>
+								<div class="label_list">
+									<div class="label_form">
+										<label class="label needed" for="work_off">퇴근</label>
+										<input type="time" name="keyword" class="form_box form-control" id="work_off" placeholder="퇴근시간 입력">
+										<button class="txt_clear btn">지우기</button>
 									</div>
-									<div class="label_list">
-										<div class="label_form">
-											<label class="label needed" for="work_location">출근장소</label>
-											<input type="text" name="keyword" class="form_box form-control" id="work_location" placeholder="출근장소 입력">
-											<button class="txt_clear btn">지우기</button>
-										</div>
-										<p class="invalid">출근장소를 입력 해 주세요.</p>
+									<p class="invalid">퇴근시간을 입력 해 주세요.</p>
+								</div>
+								<div class="label_list">
+									<div class="label_form">
+										<label class="label needed" for="work_location">출근장소</label>
+										<input type="text" name="keyword" class="form_box form-control" id="work_location" placeholder="출근장소 입력">
+										<button class="txt_clear btn">지우기</button>
 									</div>
-									<div class="label_list">
-										<div class="label_form">
-											<label class="label needed" for="work_msg">요청사유</label>
-											<textarea type="text" rows="5"name="keyword" class="form_box form-control" id="work_msg" placeholder="요청사유"></textarea>
-											<button class="txt_clear btn">지우기</button>
-										</div>
-										<p class="invalid">요청사유를 입력 해 주세요.</p>
+									<p class="invalid">출근장소를 입력 해 주세요.</p>
+								</div>
+								<div class="label_list">
+									<div class="label_form">
+										<label class="label needed" for="work_msg">요청사유</label>
+										<textarea type="text" rows="5"name="keyword" class="form_box form-control" id="work_msg" placeholder="요청사유"></textarea>
+										<button class="txt_clear btn">지우기</button>
 									</div>
+									<p class="invalid">요청사유를 입력 해 주세요.</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="modal-footer">
-						<button type="button">신청하기</button>
-					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button">신청하기</button>
 				</div>
 			</div>
 		</div>
