@@ -11,11 +11,6 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/default.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-		<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/jquery.iwtInputClearButtonController-0.9.0.js"></script>
 	</head>
 	<body>
 		<div id="wrap">
@@ -40,9 +35,11 @@
 						<p class="time">오전 09:00:00</p>
 					</div>
 					<div class="work_btn">
-						<p class="in_office"><a data-toggle="modal" data-target="#modal_in"><img src="images/gps-ico.png"/>GPS 출근</a></p>
-						<p class="out_office"><a data-toggle="modal" data-target="#modal_in"><img src="images/wifi-ico.png"/>WiFi 출근</a></p>
-						<!--<p><a href="#">PHOTO 출근</a></p>-->
+						<p class="in_office"><a data-toggle="modal" data-target="#m_work"><img src="images/gps-ico.png"/>GPS 출근</a></p>
+						<p class="out_office"><a data-toggle="modal" data-target="#m_work"><img src="images/wifi-ico.png"/>WiFi 출근</a></p>
+						<!--<p class="in_office"><a data-toggle="modal" data-target="#m_work"><img src="images/gps-ico.png"/>GPS 퇴근</a></p>
+						<p class="out_office"><a data-toggle="modal" data-target="#m_work"><img src="images/wifi-ico.png"/>WiFi 퇴근</a></p>
+						<p><a href="#">PHOTO 출근</a></p>-->
 					</div>
 					<div class="adm_modify">
 						<p class="modify_btn"><a data-toggle="modal" data-target="#mon_modify">근태기록 변경요청</a></p>
@@ -74,7 +71,7 @@
 		</div>
 
 		<!-- 출근 모달 -->
-		<div class="modal" id="modal_in" tabindex="-1">
+		<div class="modal" id="m_work" tabindex="-1">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -121,7 +118,7 @@
 								<div class="label_list">
 									<div class="label_form">
 										<label class="label needed" for="work_on">출근</label>
-										<input type="time" name="keyword" class="form_box form-control" id="work_on" placeholder="출근시간 입력">
+										<input type="time" name="keyword" class="setDatePicker form_box form-control" id="work_on" placeholder="출근시간 입력">
 										<button class="txt_clear btn">지우기</button>
 									</div>
 									<p class="invalid">출근시간을 입력 해 주세요.</p>
@@ -129,7 +126,7 @@
 								<div class="label_list">
 									<div class="label_form">
 										<label class="label needed" for="work_off">퇴근</label>
-										<input type="time" name="keyword" class="form_box form-control" id="work_off" placeholder="퇴근시간 입력">
+										<input type="time" name="keyword" class="setDatePicker form_box form-control" id="work_off" placeholder="퇴근시간 입력">
 										<button class="txt_clear btn">지우기</button>
 									</div>
 									<p class="invalid">퇴근시간을 입력 해 주세요.</p>
@@ -160,5 +157,12 @@
 			</div>
 		</div>
 		<!-- 근태기록 수정 모달 끝 -->
+		<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.iwtInputClearButtonController-0.9.0.js"></script>
+		<script src="js/MonthPicker.min.js"></script>
+		<script src="js/examples.js"></script>
 	</body>
 </html>
