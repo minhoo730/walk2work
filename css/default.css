@@ -165,7 +165,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 /*
 #mon_modify .modal-dialog{margin:0 auto; width:100%; max-width:768px; background:#fff; position:relative; height:100%;}
 */
-#mon_modify .modal-content{max-width:768px; width:100%; border-radius:0; border:none; box-shadow:none; height:100%;}
+#mon_modify .modal-content{max-width:768px; width:100%; border-radius:0; border:none; box-shadow:none; height:100%; margin:0 auto;}
 #mon_modify .modal-header button{position:absolute; left:15px; font-size:2.0em; color:#849c23; text-shadow:none; opacity:1; font-weight:400;}
 #mon_modify .modal-header h4{text-align:center; font-size:1.6em; font-weight:500;}
 #mon_modify .now_info{border-bottom:1px solid #d9d9d9; padding-bottom:10px;}
