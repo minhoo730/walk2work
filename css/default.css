@@ -202,19 +202,24 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #mon_modify .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
 
 
+.work_time .modal-content{border:none; border-radius:0;}
+.work_time .modal-content button.close{position: absolute; left: 15px; font-size: 2.0em; color: #849c23; text-shadow: none; opacity: 1; font-weight: 400;}
+.work_time .modal-content .modal-title{text-align: center; font-size: 1.5em; font-weight: 500;}
 .work_time .modal-dialog{position:absolute; bottom:0; width:100%; margin:0 auto;}
 .work_time .modal-body .pick_area:after{display:block; content:''; clear:both;}
 .work_time .modal-body .pick_area{width:290px; margin: 0 auto;}
 .work_time .modal-body .pick_area > div{float:left; text-align:center; width:28%; max-width:93px;}
-
 .work_time .modal-body .pick_area > div .up:before{left:0; top:0;}
 .work_time .modal-body .pick_area > div .down:before{left:0; top:0;}
 .work_time .modal-body .pick_area > div .action-next i{font-size:3.0em; color:#849c23;}
 .work_time .modal-body .pick_area > div input{display:inline-block; font-size:4.0em; font-weight:500; color:#333; width:100%; border:none; text-align:center;}
-.work_time .modal-body .pick_area .underbar{width:10%; padding:32px 0;}
+.work_time .modal-body .pick_area .underbar{width:10%; padding:20px 0;}
 .work_time .modal-body .pick_area .underbar p{display:inline-block; font-size:5.0em;}
 .work_time .modal-body .pick_area .meridian{margin-left:15px; padding:50px 0;}
-.work_time .modal-body .pick_area .meridian button{width:100%; height:45px; line-height:45px; border-radius:0.25em; background:#849c23; display:inline-block; color:#fff; vertical-align:middle; font-size:3.0em; border:0;}
+
+.work_time .modal-footer{padding:0;}
+.work_time .modal-body .pick_area .meridian button{width:100%; height:45px; line-height:45px; border-radius:0.25em; background:#849c23; display:inline-block; color:#fff; vertical-align:middle; font-size:3.0em; border:0; padding:0;}
+.work_time .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
 
 
 /* #MonthPicker_month_pick:before{display: block; content: ''; width: 100%; left: 0; top: 0; height: 100%; position: fixed; background: rgba(0,0,0,0.5);} 
