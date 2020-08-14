@@ -38,12 +38,20 @@
 						<h2><span class="name">엔로비</span>님의 출퇴근 기록입니다.</h2>
 						<div class="calendar">
 							<!--<p><input id="month_pick" type="text" placeholder="2020. 08" onfocus="this.blur();"/></p>-->
-							<p><input type="text" class="form-control datetimepicker-input datetimepicker2" id="work_month" data-target="#work_month"  data-toggle="datetimepicker" placeholder="날짜선택" /></p>
+							<p><input type="text" class="form-control datetimepicker-input datetimepicker2" id="work_month" data-target="#work_month"  data-toggle="datetimepicker" placeholder="월 선택" /></p>
 						</div>
+						<script>
+							$(function () {
+								$('#work_month').datetimepicker({
+									format: 'YYYY. MM',
+									orientation: 'bottom auto'
+								});
+							});
+						</script>
 					</div>
 					<div class="month_report">
-						<p>이달의 총 근무일수<br><span class="mon_data">8일</span></p>
-						<p>이달의 총 근무시간<br><span class="mon_data">64시간 30분</span></p>
+						<p>이달의 근무횟수<br><span class="mon_data">8일</span></p>
+						<p>이달의 근무시간<br><span class="mon_data">64시간 30분</span></p>
 					</div>
 					<div class="report_data">
 						<div class="re_list">
@@ -259,9 +267,17 @@
 					<div class="modal-wrap">
 						<div class="now_info">
 							<div class="calendar">
-								<p>2020.08.12 수요일</p>
-								<!--<p><input id="calendar" class="calendar" placeholder="2020. 08"/></p>-->
+								<p><input type="text" class="form-control datetimepicker-input datetimepicker3" id="work_day" data-target="#work_day"  data-toggle="datetimepicker" placeholder="날짜선택" /></p>
 							</div>
+							<script>
+								$(function () {
+									$('#work_day').datetimepicker({
+										format: 'YYYY. MM. DD',
+										orientation: 'bottom auto'
+									});
+								});
+							</script>
+
 							<div class="now">
 								<p class="txt_left">근무시간</p>
 								<p class="txt_right">9시간 00분<br><span class="modal_time">AM 09:00 - PM 06:00</span></p>
@@ -422,13 +438,6 @@
 			$('.form-control-clear').click(function() {
 				$(this).siblings('input[type="text"]').val('')
 					.trigger('propertychange').focus();
-			});
-
-			$(function () {
-				$('#work_month').datetimepicker({
-					format: 'YYYY. MM',
-					orientation: 'bottom auto'
-				});
 			});
 		</script>
 	</body>

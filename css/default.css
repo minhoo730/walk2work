@@ -64,9 +64,9 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 
 #content{padding-bottom:73px; padding-top:50px;}
 #content .map{position:relative;}
-#content .map .map_info{position:absolute; width:90%; background:rgba(255,255,255, 0.9); left:5%; top:5%; margin-left:0px; border-radius:5px; padding:15px; box-shadow: 0.6px 0.8px 20px 0 rgba(0, 0, 0, 0.25);}
-#content .map .map_info h2.map_name{font-size:1.8em; font-weight:400; margin-bottom:5px;}
-#content .map .map_info p.address{font-size:1.4em; font-weight:500; position:relative; padding-left:20px;}
+#content .map .map_info{position:absolute; width:90%; background:rgba(255,255,255, 0.9); left:5%; top:3%; margin-left:0px; border-radius:5px; padding:15px; box-shadow: 0.6px 0.8px 20px 0 rgba(0, 0, 0, 0.25);}
+#content .map .map_info h2.map_name{font-size:1.5em; font-weight:400; margin-bottom:5px;}
+#content .map .map_info p.address{font-size:1.2em; font-weight:500; position:relative; padding-left:20px;}
 #content .map .map_info p.address:before{position:absolute; content:''; background:url('../images/common_ico.png')no-repeat; width:20px; height:25px; background-position:-15px -203px; background-size:250px; left:0;}
 
 #content .work > div{border-bottom:1px solid #d9d9d9;}
@@ -172,10 +172,11 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #mon_modify .modal-header h4{text-align:center; font-size:1.6em; font-weight:500;}
 #mon_modify .now_info{border-bottom:1px solid #d9d9d9; padding-bottom:10px;}
 #mon_modify .now_info .now:after{display:block; content:''; clear:both;}
-#mon_modify .now_info p{font-size:1.4em;	color:#333;}
+#mon_modify .now_info p{font-size:1.4em;	color:#333; text-align:left;}
 #mon_modify .now_info .calendar{text-align:center;}
-#mon_modify .now_info .calendar p{display:inline-block; position:relative; padding-left:25px;}
-#mon_modify .now_info .calendar p:before{position:absolute; content:''; background:url('../images/common_ico.png')no-repeat; width:25px; height:25px; background-size:200px; text-indent:-9999px; margin:0 auto; display:block; background-position:-35px -158px; left:0; top:-1px;}
+#mon_modify .now_info .calendar p{position:relative; padding-left:25px; text-align:left;}
+#mon_modify .now_info .calendar p input{font-size:0.9em; border: none; color: #333; box-shadow: none; padding: 0px;}
+#mon_modify .now_info .calendar p:before{position:absolute; content:''; background:url('../images/common_ico.png')no-repeat; width:25px; height:25px; background-size:200px; text-indent:-9999px; margin:0 auto; display:block; background-position:-35px -158px; left:0; top:5px;}
 #mon_modify .now_info .now{margin:10px 0;}
 #mon_modify .now_info .now:last-child{margin:0;}
 #mon_modify .now_info .now p.txt_left{float:left;}
@@ -198,7 +199,6 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #mon_modify .work_form h2{font-size:1.5em;}
 
 #mon_modify .work_form .label_list .bootstrap-datetimepicker-widget{position:absolute; bottom:0;}
-
 
 #mon_modify .modal-footer{padding:0; position:fixed; bottom:0; overflow:hidden; text-align:center; width:100%; max-width:768px; left:0; right:0; margin:0 auto;}
 #mon_modify .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
