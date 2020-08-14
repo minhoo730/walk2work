@@ -48,8 +48,8 @@
 						<p class="time" id="time"></p>
 					</div>
 					<div class="work_btn">
-						<p class="in_office"><a data-toggle="modal" data-target="#m_work"><img src="images/gps-ico.png"/>GPS 출근</a></p>
-						<p class="out_office"><a data-toggle="modal" data-target="#m_work"><img src="images/wifi-ico.png"/>WiFi 출근</a></p>
+						<p class="in_office"><a data-toggle="modal" data-target="#m_work_in"><img src="images/gps-ico.png"/>GPS 출근</a></p>
+						<p class="out_office"><a data-toggle="modal" data-target="#m_work_in"><img src="images/wifi-ico.png"/>WiFi 출근</a></p>
 						<!--<p class="in_office"><a data-toggle="modal" data-target="#m_work"><img src="images/gps-ico.png"/>GPS 퇴근</a></p>
 						<p class="out_office"><a data-toggle="modal" data-target="#m_work"><img src="images/wifi-ico.png"/>WiFi 퇴근</a></p>
 						<p><a href="#">PHOTO 출근</a></p>-->
@@ -84,7 +84,7 @@
 		</div>
 
 		<!-- 출근 모달 -->
-		<div class="modal" id="m_work" tabindex="-1">
+		<div class="modal m_work" id="m_work_in" tabindex="-1">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -100,6 +100,24 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="modal m_work" id="m_work_out" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">퇴근확인</h4>
+					</div>
+					<div class="modal-body">
+						<p>현재 시간은 <span class="green">오후 18:00</span> 입니다.<br>퇴근하시겠습니까?</p>
+					</div>
+					<div class="modal-footer">
+						<button class="work_com" type="button">퇴근하기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- 출근 모달 끝 -->
 
 		<!-- 근태기록 수정 모달 -->
@@ -162,8 +180,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="modal-footer">
-					<button class="work_com" type="button">신청하기</button>
+					<div class="modal-footer">
+						<button class="work_com" type="button">신청하기</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -181,17 +200,29 @@
 						<div class="time_picker">
 							<div class="pick_area">
 								<div class="time">
-									<div class="up action-next"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
-									<div class="ti_tx"><input type="text" class="timepicki-input" value="09"></div>
-									<div class="down action-next"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+									<div class="up action-next">
+										<i class="fa fa-angle-up" aria-hidden="true"></i>
+									</div>
+									<div class="ti_tx">
+										<input type="text" class="timepicki-input" value="09">
+									</div>
+									<div class="down action-next">
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
 								</div>
 								<div class="underbar">
 									<p>:</p>
 								</div>
 								<div class="mins">
-									<div class="up action-next"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
-									<div class="mi_tx"><input type="text" class="timepicki-input" value="00"></div>
-									<div class="down action-next"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+									<div class="up action-next">
+										<i class="fa fa-angle-up" aria-hidden="true"></i>
+									</div>
+									<div class="mi_tx">
+										<input type="text" class="timepicki-input" value="00">
+									</div>
+									<div class="down action-next">
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
 								</div>
 								<div class="meridian">
 									<div class="mer_tx"><button class="apm">AM</button></div>
@@ -210,23 +241,35 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">퇴근시간 수정</h4>
+						<h4 class="modal-title"> 퇴근시간 수정</h4>
 					</div>
 					<div class="modal-body">
 						<div class="time_picker">
 							<div class="pick_area">
 								<div class="time">
-									<div class="up action-next"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
-									<div class="ti_tx"><input type="text" class="timepicki-input" value="09"></div>
-									<div class="down action-next"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+									<div class="up action-next">
+										<i class="fa fa-angle-up" aria-hidden="true"></i>
+									</div>
+									<div class="ti_tx">
+										<input type="text" class="timepicki-input" value="09">
+									</div>
+									<div class="down action-next">
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
 								</div>
 								<div class="underbar">
 									<p>:</p>
 								</div>
 								<div class="mins">
-									<div class="up action-next"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
-									<div class="mi_tx"><input type="text" class="timepicki-input" value="00"></div>
-									<div class="down action-next"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+									<div class="up action-next">
+										<i class="fa fa-angle-up" aria-hidden="true"></i>
+									</div>
+									<div class="mi_tx">
+										<input type="text" class="timepicki-input" value="00">
+									</div>
+									<div class="down action-next">
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
 								</div>
 								<div class="meridian">
 									<div class="mer_tx"><button class="apm">AM</button></div>

@@ -148,15 +148,17 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #footer .footer_menu ul li.on a span.report_img{background-position:-47px -122px;}
 
 
-#m_work .modal-dialog{position:absolute; bottom:0; margin:0; width:100%;}
-#m_work .modal-dialog .modal-content{border-radius:0; border:none;}
-#m_work .modal-dialog .modal-header button{position:absolute; left:15px; font-size:2.0em; color:#849c23; text-shadow:none; opacity:1; font-weight:400;}
-#m_work .modal-dialog .modal-header h4{text-align:center; font-size:1.5em; font-weight:500;}
-#m_work .modal-body{padding:25px;}
-#m_work .modal-body p{text-align:center; font-size:1.5em; font-weight:400;}
-#m_work .modal-body p span.green{color:#849c23; font-weight:500;}
-#m_work .modal-footer{padding:0;}
-#m_work .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
+.m_work .modal-dialog{position:absolute; bottom:0; margin:0; width:100%;}
+.m_work .modal-dialog .modal-content{border-radius:0; border:none;}
+.m_work .modal-dialog .modal-header button{position:absolute; left:15px; font-size:2.0em; color:#849c23; text-shadow:none; opacity:1; font-weight:400;}
+.m_work .modal-dialog .modal-header h4{text-align:center; font-size:1.5em; font-weight:500;}
+.m_work .modal-body{padding:25px;}
+.m_work .modal-body p{text-align:center; font-size:1.5em; font-weight:400;}
+.m_work .modal-body p span.green{color:#849c23; font-weight:500;}
+.m_work .modal-footer{padding:0;}
+.m_work .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
+
+
 
 
 #mon_modify{padding-right:0 !important; max-width:768px; width:100%; margin:0 auto;}
