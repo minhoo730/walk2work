@@ -104,7 +104,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #sub_content .report_tit h2{font-size:1.8em; color:#333; font-weight:400;}
 #sub_content .report_tit h2 span.name{color:#849c23; font-weight:500;}
 #sub_content .report_tit p{position:relative; padding-left:30px; margin-top:10px;	}
-#sub_content .report_tit p:before{position:absolute; content:''; width:22px; height:22px; background:url('../images/common_ico.png')no-repeat; background-size:200px; background-position:-35px -158px; left:0; top:5px;}
+#sub_content .report_tit p:before{position:absolute; content:''; width:22px; height:22px; background:url('../images/common_ico.png')no-repeat; background-size:200px; background-position:-35px -158px; left:0; top:5px; /* top:-1px; */}
 #sub_content .report_tit .calendar{border:none;}
 #sub_content .report_tit .calendar p input{border:none; font-size:1.3em; color:#333; box-shadow: none; padding:0px; text-align:left;}
 #sub_content .month_report:after{display:block; content:''; clear:both;}
@@ -160,6 +160,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 
 
 #mon_modify{padding-right:0 !important; max-width:768px; width:100%; margin:0 auto;}
+#mon_modify.in{overflow-y:scroll;}
 #mon_modify .modal-body{background:#fff; padding-bottom:70px;}
 /*
 #mon_modify .modal-dialog{margin:0 auto; width:100%; max-width:768px; background:#fff; position:relative; height:100%;}
@@ -170,7 +171,9 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #mon_modify .now_info{border-bottom:1px solid #d9d9d9; padding-bottom:10px;}
 #mon_modify .now_info .now:after{display:block; content:''; clear:both;}
 #mon_modify .now_info p{font-size:1.4em;	color:#333;}
-#mon_modify .now_info .calendar p{text-align:center;}
+#mon_modify .now_info .calendar{text-align:center;}
+#mon_modify .now_info .calendar p{display:inline-block; position:relative; padding-left:25px;}
+#mon_modify .now_info .calendar p:before{position:absolute; content:''; background:url('../images/common_ico.png')no-repeat; width:25px; height:25px; background-size:200px; text-indent:-9999px; margin:0 auto; display:block; background-position:-35px -158px; left:0; top:-1px;}
 #mon_modify .now_info .now{margin:10px 0;}
 #mon_modify .now_info .now:last-child{margin:0;}
 #mon_modify .now_info .now p.txt_left{float:left;}
@@ -189,15 +192,25 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #mon_modify .work_form .label_list .label_form:after{display:block; content:''; clear:both;}
 #mon_modify .work_form .label_list textarea{width:74%; float:right; margin-left:5%; border:1px solid #d9d9d9; border-radius:0; box-shadow: none;}
 
-
 #mon_modify .work_form{padding-top:20px;}
 #mon_modify .work_form h2{font-size:1.5em;}
+
+#mon_modify .work_form .label_list .bootstrap-datetimepicker-widget{position:absolute; bottom:0;}
 
 
 #mon_modify .modal-footer{padding:0; position:fixed; bottom:0; overflow:hidden; text-align:center; width:100%; max-width:768px; left:0; right:0; margin:0 auto;}
 #mon_modify .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
 
 
+.work_time .modal-dialog{position:absolute; bottom:0; width:100%; margin:0 auto;}
+.work_time .modal-body .pick_area:after{display:block; content:''; clear:both;}
+.work_time .modal-body .pick_area{width:290px; margin: 0 auto;}
+.work_time .modal-body .pick_area > div{float:left; text-align:center; width:28%; max-width:93px;}
+.work_time .modal-body .pick_area > div input{display:inline-block; font-size:4.5em; font-weight:500; color:#333; width:100%; border:none; text-align:center;}
+.work_time .modal-body .pick_area .underbar{width:10%;}
+.work_time .modal-body .pick_area .underbar p{display:inline-block; height:85px; line-height:60px; font-size:5.0em;}
+.work_time .modal-body .pick_area .meridian{margin-left:15px;}
+.work_time .modal-body .pick_area .meridian button{width:100%; height:55px; line-height:55px; margin:15px 0; border-radius:0.25em; background:#849c23; display:inline-block; color:#fff; vertical-align:middle; font-size:3.5em; border:0;}
 
 
 /* #MonthPicker_month_pick:before{display: block; content: ''; width: 100%; left: 0; top: 0; height: 100%; position: fixed; background: rgba(0,0,0,0.5);} 

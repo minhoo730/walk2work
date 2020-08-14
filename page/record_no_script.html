@@ -11,9 +11,7 @@
 		<link rel="stylesheet" href="../css/default.css">
 		<link rel="stylesheet" href="../css/tempusdominus-bootstrap-4.css" />
 
-		<!--
 		<link rel="stylesheet" href="../css/jquery.timepicker.css">
-		-->
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
@@ -21,14 +19,11 @@
 		<script type="text/javascript" src="../js/tempusdominus-bootstrap-4.min.js"></script>
 		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../js/jquery.iwtInputClearButtonController-0.9.0.js"></script>
-		<!--
 		<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 	    <script src="https://cdn.rawgit.com/digitalBush/jquery.maskedinput/1.4.1/dist/jquery.maskedinput.min.js"></script>
 		<script type="text/javascript" src="../js/monthpicker.js"></script>
 		<script type="text/javascript" src="../js/month_my.js"></script>
 		<script type="text/javascript" src="../js/jquery.timepicker.min.js"></script>
-		-->
-
 	</head>
 	<body>
 		<div id="wrap">
@@ -263,7 +258,7 @@
 					<div class="modal-wrap">
 						<div class="now_info">
 							<div class="calendar">
-								<p><a href="#">2020.08.12 수요일</a></p>
+								<p>2020.08.12 수요일</p>
 								<!--<p><input id="calendar" class="calendar" placeholder="2020. 08"/></p>-->
 							</div>
 							<div class="now">
@@ -281,7 +276,7 @@
 								<div class="label_list">
 									<div class="label_form">
 										<label class="label needed" for="work_on">출근</label>
-										<input type="text" class="form-control datetimepicker-input datetimepicker1" data-target="#work_on" id="work_on" data-toggle="datetimepicker" placeholder="출근시간 입력"/>
+										<input type="text" name="keyword" class="form_box form-control" id="work_on"  placeholder="출근시간 입력" data-toggle="modal" data-target="#t_on"/>
 										<button class="txt_clear btn form-control-clear">지우기</button>
 									</div>
 									<p class="invalid">출근시간을 입력 해 주세요.</p>
@@ -289,14 +284,14 @@
 								<div class="label_list">
 									<div class="label_form">
 										<label class="label needed" for="work_off">퇴근</label>
-										<input type="text" class="form-control datetimepicker-input datetimepicker1" data-target="#work_off" id="work_off" data-toggle="datetimepicker" placeholder="퇴근시간 입력"/>
+										<input type="text" name="keyword" class="form_box form-control" id="#t_off" data-toggle="modal" data-target="#t_off" placeholder="퇴근시간 입력"/>
 										<button class="txt_clear btn form-control-clear">지우기</button>
 									<p class="invalid">퇴근시간을 입력 해 주세요.</p>
 								</div>
 								<div class="label_list">
 									<div class="label_form">
 										<label class="label needed" for="work_location">출근장소</label>
-										<input type="text" name="keyword" class="form_box form-control" id="work_location" placeholder="출근장소 입력">
+										<input type="text" name="keyword" class="form_box form-control" id="work_location" placeholder="퇴근장소 입력" data-target="#work_ㅐoff_time">
 										<button class="txt_clear btn form-control-clear">지우기</button>
 									</div>
 									<p class="invalid">출근장소를 입력 해 주세요.</p>
@@ -317,6 +312,76 @@
 				</div>
 			</div>
 		</div>
+		<div class="modal work_time" id="t_on" backdrop="static" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">출근시간 수정</h4>
+					</div>
+					<div class="modal-body">
+						<div class="time_picker">
+							<div class="pick_area">
+								<div class="time">
+									<div class="prev action-next"></div>
+									<div class="ti_tx"><input type="text" class="timepicki-input" value="09"></div>
+									<div class="next action-prev"></div>
+								</div>
+								<div class="underbar">
+									<p>:</p>
+								</div>
+								<div class="mins">
+									<div class="prev action-next"></div>
+									<div class="mi_tx"><input type="text" class="timepicki-input" value="00"></div>
+									<div class="next action-prev"></div>
+								</div>
+								<div class="meridian">
+									<div class="mer_tx"><button class="apm">AM</button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="work_com" type="button">수정</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal work_time" id="t_off" backdrop="static" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">출근시간 수정</h4>
+					</div>
+					<div class="modal-body">
+						<div class="time_picker">
+							<div class="pick_area">
+								<div class="time">
+									<div class="prev action-next"></div>
+									<div class="ti_tx"><input type="text" class="timepicki-input" value="09"></div>
+									<div class="next action-prev"></div>
+								</div>
+								<div class="underbar">
+									<p>:</p>
+								</div>
+								<div class="mins">
+									<div class="prev action-next"></div>
+									<div class="mi_tx"><input type="text" class="timepicki-input" value="00"></div>
+									<div class="next action-prev"></div>
+								</div>
+								<div class="meridian">
+									<div class="mer_tx"><button class="apm">AM</button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="work_com" type="button">수정</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script>
 			// 삭제 버튼 클릭시 텍스트 제거 스크립트
 			$('.has-clear input[type="text"]').on('input propertychange', function() {
@@ -330,9 +395,6 @@
 			});
 
 			$(function () {
-				$('.datetimepicker1').datetimepicker({
-					format: 'LT'
-				});
 				$('#work_month').datetimepicker({
 					format: 'YYYY. MM',
 					orientation: 'bottom auto'

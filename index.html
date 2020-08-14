@@ -6,11 +6,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
 		<title>Walk2Work</title>
-
 		<!-- 부트스트랩 -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/default.css">
+		<link rel="stylesheet" href="css/tempusdominus-bootstrap-4.css" />
+
+		<link rel="stylesheet" href="css/jquery.timepicker.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+		<script type="text/javascript" src="js/ko.js"></script>
+		<script type="text/javascript" src="js/tempusdominus-bootstrap-4.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.iwtInputClearButtonController-0.9.0.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	    <script src="https://cdn.rawgit.com/digitalBush/jquery.maskedinput/1.4.1/dist/jquery.maskedinput.min.js"></script>
+		<script type="text/javascript" src="js/monthpicker.js"></script>
+		<script type="text/javascript" src="js/month_my.js"></script>
+		<script type="text/javascript" src="js/jquery.timepicker.min.js"></script>
 	</head>
 	<body>
 		<div id="wrap">
@@ -32,7 +45,7 @@
 				<div class="work">
 					<div class="now_time current_time">
 						<p class="current_txt">현재시간</p>
-						<p class="time">오전 09:00:00</p>
+						<p class="time" id="time">오전 09:00:00</p>
 					</div>
 					<div class="work_btn">
 						<p class="in_office"><a data-toggle="modal" data-target="#m_work"><img src="images/gps-ico.png"/>GPS 출근</a></p>
@@ -100,15 +113,15 @@
 					<div class="modal-wrap">
 						<div class="now_info">
 							<div class="calendar">
-								<p><a href="#">2020.08.12 수요일</a></p>
+								<p>2020.08.12 수요일</p>
 								<!--<p><input id="calendar" class="calendar" placeholder="2020. 08"/></p>-->
 							</div>
 							<div class="now">
-								<p class="txt_left">현 근무시간</p>
+								<p class="txt_left">근무시간</p>
 								<p class="txt_right">9시간 00분<br><span class="modal_time">AM 09:00 - PM 06:00</span></p>
 							</div>
 							<div class="now">
-								<p class="txt_left">현 근무장소</p>
+								<p class="txt_left">근무장소</p>
 								<p class="txt_right">서울 넷마블 본사</p>
 							</div>
 						</div>
@@ -118,24 +131,23 @@
 								<div class="label_list">
 									<div class="label_form">
 										<label class="label needed" for="work_on">출근</label>
-										<input type="time" name="keyword" class="setDatePicker form_box form-control" id="work_on" placeholder="출근시간 입력">
-										<button class="txt_clear btn">지우기</button>
+										<input type="text" name="keyword" class="form_box form-control" id="work_on"  placeholder="출근시간 입력" data-toggle="modal" data-target="#t_on"/>
+										<button class="txt_clear btn form-control-clear">지우기</button>
 									</div>
 									<p class="invalid">출근시간을 입력 해 주세요.</p>
 								</div>
 								<div class="label_list">
 									<div class="label_form">
 										<label class="label needed" for="work_off">퇴근</label>
-										<input type="time" name="keyword" class="setDatePicker form_box form-control" id="work_off" placeholder="퇴근시간 입력">
-										<button class="txt_clear btn">지우기</button>
-									</div>
+										<input type="text" name="keyword" class="form_box form-control" id="#t_off" data-toggle="modal" data-target="#t_off" placeholder="퇴근시간 입력"/>
+										<button class="txt_clear btn form-control-clear">지우기</button>
 									<p class="invalid">퇴근시간을 입력 해 주세요.</p>
 								</div>
 								<div class="label_list">
 									<div class="label_form">
 										<label class="label needed" for="work_location">출근장소</label>
-										<input type="text" name="keyword" class="form_box form-control" id="work_location" placeholder="출근장소 입력">
-										<button class="txt_clear btn">지우기</button>
+										<input type="text" name="keyword" class="form_box form-control" id="work_location" placeholder="퇴근장소 입력" data-target="#work_ㅐoff_time">
+										<button class="txt_clear btn form-control-clear">지우기</button>
 									</div>
 									<p class="invalid">출근장소를 입력 해 주세요.</p>
 								</div>
@@ -143,7 +155,6 @@
 									<div class="label_form">
 										<label class="label needed" for="work_msg">요청사유</label>
 										<textarea type="text" rows="5"name="keyword" class="form_box form-control" id="work_msg" placeholder="요청사유"></textarea>
-										<button class="txt_clear btn">지우기</button>
 									</div>
 									<p class="invalid">요청사유를 입력 해 주세요.</p>
 								</div>
@@ -157,12 +168,119 @@
 			</div>
 		</div>
 		<!-- 근태기록 수정 모달 끝 -->
-		<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/jquery.iwtInputClearButtonController-0.9.0.js"></script>
-		<script src="js/MonthPicker.min.js"></script>
-		<script src="js/examples.js"></script>
+
+		<!-- 시간 수정 모달 -->
+		<div class="modal work_time" id="t_on" backdrop="static" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">출근시간 수정</h4>
+					</div>
+					<div class="modal-body">
+						<div class="time_picker">
+							<div class="pick_area">
+								<div class="time">
+									<div class="prev action-next"></div>
+									<div class="ti_tx"><input type="text" class="timepicki-input" value="09"></div>
+									<div class="next action-prev"></div>
+								</div>
+								<div class="underbar">
+									<p>:</p>
+								</div>
+								<div class="mins">
+									<div class="prev action-next"></div>
+									<div class="mi_tx"><input type="text" class="timepicki-input" value="00"></div>
+									<div class="next action-prev"></div>
+								</div>
+								<div class="meridian">
+									<div class="mer_tx"><button class="apm">AM</button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="work_com" type="button">수정</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal work_time" id="t_off" backdrop="static" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">출근시간 수정</h4>
+					</div>
+					<div class="modal-body">
+						<div class="time_picker">
+							<div class="pick_area">
+								<div class="time">
+									<div class="prev action-next"></div>
+									<div class="ti_tx"><input type="text" class="timepicki-input" value="09"></div>
+									<div class="next action-prev"></div>
+								</div>
+								<div class="underbar">
+									<p>:</p>
+								</div>
+								<div class="mins">
+									<div class="prev action-next"></div>
+									<div class="mi_tx"><input type="text" class="timepicki-input" value="00"></div>
+									<div class="next action-prev"></div>
+								</div>
+								<div class="meridian">
+									<div class="mer_tx"><button class="apm">AM</button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="work_com" type="button">수정</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 수정 끝 -->
+		<script>
+
+setInterval("time()",1000);
+function time(){
+	var now = new Date();
+	hours = now.getHours();
+	minutes = now.getMinutes();
+	seconds = now.getSeconds();
+		if (hours > 12){
+			hours -= 12;
+			ampm = "오후 ";
+		}
+		else{ ampm = "오전 "; }
+			if (hours < 10){
+				hours = "0" + hours;
+			} if (minutes < 10){
+				minutes = "0" + minutes;
+				} if (seconds < 10){
+					seconds = "0" + seconds;
+					} document.getElementById("time").innerHTML = ampm + hours + ":" + minutes + ":" + seconds; }
+		</script>
+
+		<script>
+			// 삭제 버튼 클릭시 텍스트 제거 스크립트
+			$('.has-clear input[type="text"]').on('input propertychange', function() {
+				var $this = $(this);
+				var visible = Boolean($this.val());
+				$this.siblings('.form-control-clear').toggleClass('hidden', !visible);
+			}).trigger('propertychange');
+			$('.form-control-clear').click(function() {
+				$(this).siblings('input[type="text"]').val('')
+					.trigger('propertychange').focus();
+			});
+
+			$(function () {
+				$('#work_month').datetimepicker({
+					format: 'YYYY. MM',
+					orientation: 'bottom auto'
+				});
+			});
+		</script>
 	</body>
 </html>

@@ -126,18 +126,21 @@
         background: none;
         color: #6c757d;
         cursor: not-allowed; }
-      .bootstrap-datetimepicker-widget table th.prev{padding-left:10px;}
-      .bootstrap-datetimepicker-widget table th.next{padding-right:10px;}
       .bootstrap-datetimepicker-widget table th.prev::after {
-        content: "Previous Month"; }
+        content: "Previous Month";}
       .bootstrap-datetimepicker-widget table th.next::after {
-        content: "Next Month"; }
+        content: "Next Month";}
 
 	.bootstrap-datetimepicker-widget table thead{
 		background:#849c23;
 	}
    .bootstrap-datetimepicker-widget table thead tr:first-child th {
-      cursor: pointer; color:#fff;}
+      cursor: pointer;
+	  color:#fff;
+	  padding:10px 0;
+	  font-size:1.3em;
+	}
+
    /*
       .bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
         background: #e9ecef; }
@@ -145,7 +148,8 @@
     .bootstrap-datetimepicker-widget table td {
       height: 30px;
       line-height: 30px;
-      width: 54px; }
+      width: 54px;
+	  }
       .bootstrap-datetimepicker-widget table td.cw {
         font-size: .8em;
         height: 20px;
@@ -185,8 +189,8 @@
       .bootstrap-datetimepicker-widget table td span {
         display: inline-block;
         width: 54px;
-        height: 30px;
-        line-height: 30px;
+        height: 40px;
+        line-height: 40px;
         margin: 5px 1.5px;
         cursor: pointer;
         border-radius: 0.25em; }
