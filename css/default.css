@@ -168,13 +168,13 @@ body .modal input[type="file"]{border-bottom:none !important;}
 body .modal textarea:focus{border:1px solid #849c23 !important;}
 body .modal .modal-backdrop{height:100% !Important;}
 
-#mon_modify{padding-right:0 !important; max-width:768px; width:100%; margin:0 auto;}
+#mon_modify{padding-right:0 !important; max-width:100%; width:100%; margin:0 auto;}
 #mon_modify.in{overflow-y:scroll;}
 #mon_modify .modal-body{background:#fff; padding-bottom:70px;}
 /*
 #mon_modify .modal-dialog{margin:0 auto; width:100%; max-width:768px; background:#fff; position:relative; height:100%;}
 */
-#mon_modify .modal-content{max-width:768px; width:100%; border-radius:0; border:none; box-shadow:none; height:100%; margin:0 auto;}
+#mon_modify .modal-content{max-width:100%; width:100%; border-radius:0; border:none; box-shadow:none; height:100%; margin:0 auto;}
 #mon_modify .modal-header{border-bottom:1px solid #849c23;}
 #mon_modify .modal-header button{position:absolute; left:15px; font-size:2.0em; color:#849c23; text-shadow:none; opacity:1; font-weight:400;}
 #mon_modify .modal-header h4{text-align:center; font-size:1.6em; font-weight:500;}
@@ -225,7 +225,7 @@ body .modal .modal-backdrop{height:100% !Important;}
 #mon_modify .work_form .label_list .bootstrap-datetimepicker-widget{position:absolute; bottom:0;}
 */
 
-#mon_modify .modal-footer{padding:0; position:fixed; bottom:0; overflow:hidden; text-align:center; width:100%; max-width:768px; left:0; right:0; margin:0 auto;}
+#mon_modify .modal-footer{padding:0; position:fixed; bottom:0; overflow:hidden; text-align:center; width:100%; max-width:100%; left:0; right:0; margin:0 auto;}
 #mon_modify .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
 
 
