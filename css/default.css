@@ -229,7 +229,7 @@ body .modal .modal-backdrop{height:100% !Important;}
 #mon_modify .work_form .label_list .bootstrap-datetimepicker-widget{position:absolute; bottom:0;}
 */
 
-#mon_modify .modal-footer{padding:0; position:fixed; bottom:-40px; overflow:hidden; text-align:center; width:100%; max-width:100%; left:0; right:0; margin:0 auto;}
+#mon_modify .modal-footer{padding:0; position:absolute; bottom:-40px; overflow:hidden; text-align:center; width:100%; max-width:100%; left:0; right:0; margin:0 auto;}
 #mon_modify .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
 
 
