@@ -10,7 +10,7 @@ legend {position:absolute;font-size:0;line-height:0;text-indent:-9999em;overflow
 label, input, button, select, img {vertical-align:middle}
 input, button {margin:0;padding:0;font-size:1em; font-family: 'Noto Sans Korean', sans-serif;}
 button {cursor:pointer}
-input[type=text], input[type=password], input[type=submit], input[type=image], button {font-size:1em;-webkit-appearance:none}
+input[type=text], input[type=password], input[type=submit], input[type=image], button {font-size:1em;-webkit-appearance:none;}
 textarea, select {font-size:1em; font-family: 'Noto Sans Korean', sans-serif;}
 textarea {border-radius:0;-webkit-appearance:none; font-family: 'Noto Sans Korean', sans-serif;}
 select {margin:0;background:none; font-family: 'Noto Sans Korean', sans-serif;}
@@ -39,7 +39,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #wrap .splashy_bot p{display:inline-block;}
 #wrap .splashy_bot p img{width:60%;}
 
-/* 휴대전화번호 입력 페이지 */
+/* 휴대전화번호, 아이디 입력 페이지 */
 #in_content{display:table; width:100%; height:100%; margin:0 auto; text-align:center;}
 #in_content .form_area{display:table-cell; vertical-align:middle; padding-left:20px; padding-right:20px;}
 #in_content .p_page{width:100%; margin:0 auto;}
@@ -48,7 +48,9 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #in_content .p_page h2 span.form_img{text-indent:-9999px; position:relative; width:160px; height:160px; display:block; margin:0 auto; background:url('../images/login_3x.png')no-repeat; background-size:160px;}
 #in_content .p_page h2 span.green{font-weight:500; color:#849c23;}
 #in_content .p_page .label_list{margin-top:50px;}
-#in_content .p_page .label_list input.phone_form{width:100%; border:none; border-bottom:1px solid #d9d9d9; font-size:1.5em; padding:10px; color:#333;}
+#in_content .p_page .label_list input{width:100%; border:none; border-bottom:1px solid #d9d9d9; font-size:1.4em; padding:10px; color:#333; box-shadow:none;}
+#in_content .p_page .label_list input:focus{border-bottom:1px solid #849c23;}
+
 #in_content .form_area p.invalid{text-align:left; display:block; font-size:1.3em; color:#ff0000; margin-top:5px;}
 #in_content .work_btn{position:fixed; bottom:0; left:0; width:100%;}
 .work_com{width: 100%; background: #849c23; color: #fff; font-size: 1.5em; border: none; border-radius: 0; padding: 15px; display:block;}
@@ -159,7 +161,9 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 .m_work .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
 
 
-
+body .modal input:focus{border-bottom:1px solid #849c23 !important;}
+body .modal textarea:focus{border:1px solid #849c23 !important;}
+body .modal .modal-backdrop{height:100% !Important;}
 
 #mon_modify{padding-right:0 !important; max-width:768px; width:100%; margin:0 auto;}
 #mon_modify.in{overflow-y:scroll;}
@@ -168,15 +172,21 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 #mon_modify .modal-dialog{margin:0 auto; width:100%; max-width:768px; background:#fff; position:relative; height:100%;}
 */
 #mon_modify .modal-content{max-width:768px; width:100%; border-radius:0; border:none; box-shadow:none; height:100%; margin:0 auto;}
+#mon_modify .modal-header{border-bottom:1px solid #849c23;}
 #mon_modify .modal-header button{position:absolute; left:15px; font-size:2.0em; color:#849c23; text-shadow:none; opacity:1; font-weight:400;}
 #mon_modify .modal-header h4{text-align:center; font-size:1.6em; font-weight:500;}
 #mon_modify .now_info{border-bottom:1px solid #d9d9d9; padding-bottom:10px;}
 #mon_modify .now_info .now:after{display:block; content:''; clear:both;}
 #mon_modify .now_info p{font-size:1.4em;	color:#333; text-align:left;}
-#mon_modify .now_info .calendar{text-align:center;}
-#mon_modify .now_info .calendar p{position:relative; padding-left:25px; text-align:left;}
+#mon_modify .now_info .calendar{width:170px; margin:0 auto;}
+#mon_modify .now_info .calendar p{position:relative; text-align:center;}
 #mon_modify .now_info .calendar p input{font-size:0.9em; border: none; color: #333; box-shadow: none; padding: 0px;}
-#mon_modify .now_info .calendar p:before{position:absolute; content:''; background:url('../images/common_ico.png')no-repeat; width:25px; height:25px; background-size:200px; text-indent:-9999px; margin:0 auto; display:block; background-position:-35px -158px; left:0; top:5px;}
+#mon_modify .now_info .calendar p span.calendar_ico{text-indent:-9999px; background:url('../images/common_ico.png')no-repeat; width:16px; height:20px; background-size:200px; display:inline-block; background-position:-38px -159px; margin-right:5px;}
+
+/*
+#mon_modify .now_info .calendar p:before{position:absolute; content:''; background:url('../images/common_ico.png')no-repeat; width:25px; height:25px; background-size:200px; text-indent:-9999px; margin:0 auto; display:block; background-position:-35px -158px; left:0; top:-1px;}
+*/
+
 #mon_modify .now_info .now{margin:10px 0;}
 #mon_modify .now_info .now:last-child{margin:0;}
 #mon_modify .now_info .now p.txt_left{float:left;}
