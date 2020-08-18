@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 @import url(https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/stylesheets/NotoSansKR-Hestia.css);
 
-html {overflow-y:scroll; height:100%; min-width:320px; max-width:768px; margin:0 auto;}
+html {/* overflow-y:scroll; */ height:100%; min-width:320px; max-width:768px; margin:0 auto;}
 body {margin:0; padding:0; font-size:1.2em; letter-spacing:-1px; background:#fff; height:100%; font-family: 'Noto Sans Korean', sans-serif; position:relative;}
 h1, h2, h3, h4, h5, h6, form, fieldset, img, label {margin:0; padding:0; border:0}
 h1, h2, h3, h4, h5, h6 {font-size:1em; font-family: 'Noto Sans Korean', sans-serif;}
@@ -25,6 +25,8 @@ body .txt_clear:active{position:absolute; width:18px; height:18px; top:8px; righ
 
 .txt_clear{position:absolute; width:18px; height:18px; top:8px; right:0px; text-indent:-9999px; background: url('../images/common_ico.png')no-repeat; background-size: 300px; padding-right:0; background-position: -268px -88px;}
 button.common_btn{position:relative; background:#fff; border:1px solid #849c23; color:#849c23; width:100%; font-weight:400; margin:10px 0; font-size:1.2em; margin:10px 0 0 0;}
+
+body.modal-open{padding:0 !important;}
 
 *,:after,:before {
   -webkit-box-sizing:border-box;
@@ -168,17 +170,19 @@ body .modal input[type="file"]{border-bottom:none !important;}
 body .modal textarea:focus{border:1px solid #849c23 !important;}
 body .modal .modal-backdrop{height:100% !Important;}
 
-#mon_modify{padding-right:0 !important; max-width:100%; width:100%; margin:0 auto;}
+#mon_modify{padding:0 !important; max-width:100%; width:100%; margin:0 auto;}
 #mon_modify.in{overflow-y:scroll;}
 #mon_modify .modal-body{background:#fff; padding-bottom:70px;}
 /*
 #mon_modify .modal-dialog{margin:0 auto; width:100%; max-width:768px; background:#fff; position:relative; height:100%;}
 */
+#mon_modify .modal-dialog{height:100%; margin:0;}
+
 #mon_modify .modal-content{max-width:100%; width:100%; border-radius:0; border:none; box-shadow:none; height:100%; margin:0 auto;}
 #mon_modify .modal-header{border-bottom:1px solid #849c23;}
 #mon_modify .modal-header button{position:absolute; left:15px; font-size:2.0em; color:#849c23; text-shadow:none; opacity:1; font-weight:400;}
 #mon_modify .modal-header h4{text-align:center; font-size:1.6em; font-weight:500;}
-#mon_modify .now_info{border-bottom:1px solid #d9d9d9; padding-bottom:10px;}
+#mon_modify .now_info{border-bottom:1px solid #e9e9e9; padding-bottom:10px;}
 #mon_modify .now_info .now:after{display:block; content:''; clear:both;}
 #mon_modify .now_info p{font-size:1.4em;	color:#333; text-align:left;}
 #mon_modify .now_info .calendar{width:170px; margin:0 auto;}
