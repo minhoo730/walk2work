@@ -102,7 +102,7 @@ button.common_btn{position:relative; background:#fff; border:1px solid #849c23; 
 
 /* subpage */
 #sub_content{padding-bottom:73px; padding-top:50px;}
-#sub_content .report_tit{padding:25px 20px; border-bottom:1px solid #849c23;}
+#sub_content .report_tit{padding:20px 20px 10px 20px; border-bottom:1px solid #849c23;}
 #sub_content .report_tit h2{font-size:1.8em; color:#333; font-weight:400;}
 #sub_content .report_tit h2 span.name{color:#849c23; font-weight:500;}
 #sub_content .report_tit p{position:relative; padding-left:30px; margin-top:10px;	}
