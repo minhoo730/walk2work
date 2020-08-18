@@ -11,24 +11,15 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/default.css">
 		<link rel="stylesheet" href="css/tempusdominus-bootstrap-4.css" />
-
-		<!--<link rel="stylesheet" href="css/jquery.timepicker.css">-->
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<!--<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>-->
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/velocity.js"></script>
 		<script type="text/javascript" src="js/velocity.ui.js"></script>
 		<script type="text/javascript" src="js/tempusdominus-bootstrap-4.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 		<script type="text/javascript" src="js/ko.js"></script>
 		<script type="text/javascript" src="js/jquery.iwtInputClearButtonController-0.9.0.js"></script>
-		<!--<script type="text/javascript" src="../js/monthpicker.js"></script>
-		<script type="text/javascript" src="../js/month_my.js"></script>-->
-		<!--<script type="text/javascript" src="../js/jquery.timepicker.min.js"></script>-->
-	    <!--
-		<script src="https://cdn.rawgit.com/digitalBush/jquery.maskedinput/1.4.1/dist/jquery.maskedinput.min.js"></script>
-		-->
 	</head>
 	<body>
 		<div id="wrap">
@@ -126,7 +117,7 @@
 		<!-- 출근 모달 끝 -->
 
 		<!-- 근태기록 수정 모달 -->
-		<div class="modal" id="mon_modify" role="dialog" data-easein="slideUpBigIn" tabindex="-1">
+		<div class="modal" id="mon_modify" role="dialog" data-backdrop="false" data-easein="slideUpBigIn" tabindex="-1">
             <div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -383,15 +374,29 @@ function time(){
 					orientation: 'bottom auto'
 				});
 			});
-		</script>
 
-		 <script>
 			$(".modal").each(function(l){
 				$(this).on("show.bs.modal",
 				function(l){
 					var o=$(this).attr("data-easein");"shake"==o?$(".modal-dialog").velocity("callout."+o):"pulse"==o?$(".modal-dialog").velocity("callout."+o):"tada"==o?$(".modal-dialog").velocity("callout."+o):"flash"==o?$(".modal-dialog").velocity("callout."+o):"bounce"==o?$(".modal-dialog").velocity("callout."+o):"swing"==o?$(".modal-dialog").velocity("callout."+o):$(".modal-dialog").velocity("transition."+o)
 				})
-			});	
+			});
+
+			var count = 0; // 모달이 열릴 때 마다 count 해서  z-index값을 높여줌
+				$(document).on('show.bs.modal', '.modal', function () {
+					var zIndex = 1040 + (10 * count);
+					$(this).css('z-index', zIndex);
+					setTimeout(function() {
+						$('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+					}, 0);
+					count = count + 1
+				});
+
+			// multiple modal Scrollbar fix
+
+			$(document).on('hidden.bs.modal', '.modal', function () {
+				$('.modal:visible').length && $(document.body).addClass('modal-open');
+			});
 		</script>
 	</body>
 </html>
