@@ -172,7 +172,7 @@ body .modal .modal-backdrop{height:100% !Important;}
 
 #mon_modify{padding:0 !important; max-width:100%; width:100%; background:#fff; margin:0 auto;}
 #mon_modify.in{overflow-y:scroll;}
-#mon_modify .modal-body{background:#fff; margin-bottom:50px; height:100%;}
+#mon_modify .modal-body{background:#fff; /* margin-bottom:50px; */ height:100%;}
 /*
 #mon_modify .modal-dialog{margin:0 auto; width:100%; max-width:768px; background:#fff; position:relative; height:100%;}
 */
