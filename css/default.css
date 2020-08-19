@@ -207,8 +207,8 @@ body .modal .modal-backdrop{height:100% !Important;}
 #mon_modify .work_form .work_modify table tr td{font-size:1.2em; position:relative; padding-bottom:10px;}
 #mon_modify .work_form .work_modify table tr td.form{vertical-align:top; padding-top:5px;}
 #mon_modify .work_form .work_modify table tr td label{color:#333; font-size:1.0em; font-weight:400; vertical-align:middle; padding-left:0;}
-#mon_modify .work_form table tr td input{border:0; border-bottom:1px solid #d9d9d9; border-radius:0; box-shadow: none;}
-#mon_modify .work_form table tr td textarea{border-radius:0; border-bottom:1px solid #d9d9d9; box-shadow:none;}
+#mon_modify .work_form table tr td input{border:0; border-bottom:1px solid #d9d9d9; border-radius:0; box-shadow: none; width:100%;}
+#mon_modify .work_form table tr td textarea{border-radius:0; border-bottom:1px solid #d9d9d9; box-shadow:none; font-size:1.0em;}
 #mon_modify .work_form table tr td span.invalid{text-align:left; display:none; font-size:0.9em; color:#ff0000; margin-top:5px; font-weight:400;}
 
 /*
@@ -229,7 +229,7 @@ body .modal .modal-backdrop{height:100% !Important;}
 #mon_modify .work_form .label_list .bootstrap-datetimepicker-widget{position:absolute; bottom:0;}
 */
 
-#mon_modify .modal-footer{padding:0; position:absolute; overflow:hidden; text-align:center; width:100%; max-width:100%; left:0; right:0; margin:0 auto;}
+#mon_modify .modal-footer{padding:0; position:absolute; overflow:hidden; text-align:center; width:100%; max-width:100%; left:0; right:0; margin:0 auto; bottom:-30%;}
 #mon_modify .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
 
 
@@ -253,6 +253,7 @@ body .modal .modal-backdrop{height:100% !Important;}
 .work_time .modal-footer button{width:100%; background:#849c23; color:#fff; font-size:1.5em; border:none; border-radius:0; padding:15px;}
 
 
+
 /* #MonthPicker_month_pick:before{display: block; content: ''; width: 100%; left: 0; top: 0; height: 100%; position: fixed; background: rgba(0,0,0,0.5);} 
 #MonthPicker_month_pick > div > table{position:relative; z-index:333;}
 #MonthPicker_month_pick .modal-backdrop{position: fixed; width: 100%; background:rgba(0,0,0,0.5); height: 100%; display:block !important;}
@@ -271,4 +272,15 @@ body .month-picker-month-table tr td a{color:#333; padding:5px 10px; border-radi
 body .month-picker-month-table tr td a.ui-state-hover,
 body .month-picker-month-table tr td a.ui-state-active{background:#849c23 !important; color:#fff !important;}
 body .month-picker-month-table tr td a.ui-state-highlight{background:#fff; border:1px solid #849c23; color:#333;}
+*/
+
+
+/* MultiFile Upload */
+
+
+/*
+div.MultiFile-list{margin:15px 0;}
+div.MultiFile-label .MultiFile-label{float:left; width:50%;}
+div.MultiFile-label > span:after{display:block; content:''; clear:both;}
+div.MultiFile-label > span .MultiFile-title{display:block;}
 */
