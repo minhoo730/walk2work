@@ -172,7 +172,7 @@ body .modal .modal-backdrop{height:100% !Important;}
 
 #mon_modify{padding:0 !important; max-width:100%; width:100%; background:#fff; margin:0 auto;}
 #mon_modify.in{overflow-y:scroll;}
-#mon_modify .modal-body{background:#fff; padding-bottom:70px; height:100%;}
+#mon_modify .modal-body{background:#fff; margin-bottom:50px; height:100%;}
 /*
 #mon_modify .modal-dialog{margin:0 auto; width:100%; max-width:768px; background:#fff; position:relative; height:100%;}
 */
@@ -278,9 +278,14 @@ body .month-picker-month-table tr td a.ui-state-highlight{background:#fff; borde
 /* MultiFile Upload */
 
 
-/*
-div.MultiFile-list{margin:15px 0;}
-div.MultiFile-label .MultiFile-label{float:left; width:50%;}
-div.MultiFile-label > span:after{display:block; content:''; clear:both;}
-div.MultiFile-label > span .MultiFile-title{display:block;}
-*/
+
+.MultiFile-list{margin:15px 0; display:table; width:100%;}
+.MultiFile-list:after{display:block; content:''; clear:both;}
+.MultiFile-list div.MultiFile-label > span .MultiFile-label:after{display:block; content:''; clear:both;}
+.MultiFile-list div.MultiFile-label > span .MultiFile-label{display:inline-block; width:100%;}
+.MultiFile-list div.MultiFile-label > span .MultiFile-title{display:block; font-size:0.9em; color:#333; font-weight:400; text-align:center;}
+div.MultiFile-label{width:50%; display:table-cell; height:120px; position:relative; text-align:center;}
+.MultiFile-list div.MultiFile-label > span .MultiFile-size{color:#ff0000; font-weight:400; padding-left:5px;}
+div.MultiFile-label .MultiFile-remove{position:absolute; left:5px; top:5px;}
+div.MultiFile-label .MultiFile-remove .file_clear{text-indent:-9999px;}
+div.MultiFile-label .MultiFile-remove a{font-size:1.5em; color:#333;}

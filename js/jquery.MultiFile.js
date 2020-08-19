@@ -448,9 +448,8 @@ if (window.jQuery)(function ($) {
 								label =	$(
 										(
 											'<span class="MultiFile-label" title="' + t + '">'+
-												'<span class="MultiFile-title">'+ n +'</span>'+
-												(MultiFile.preview || $(slave).is('.with-preview') ? p : '' )+
-											'</span>'
+												(MultiFile.preview || $(slave).is('.with-preview') ? p : '' )+ '</span>' +
+											'<span class="MultiFile-title">'+ n + '<span class="MultiFile-size">' + '($size)' + '</span></span>'
 										)
 										.replace(/\$(file|name)/gi, (v.match(/[^\/\\]+$/gi)||[v])[0])
 										.replace(/\$(ext|extension|type)/gi, (v.match(/[^\.]+$/gi)||[''])[0])
@@ -478,7 +477,7 @@ if (window.jQuery)(function ($) {
 						// Create label elements
 						var
 							r = $('<div class="MultiFile-label"></div>'),
-							b = $('<a class="MultiFile-remove" href="#' + MultiFile.wrapID + '">' + MultiFile.STRING.remove + '</a>')
+							b = $('<a class="MultiFile-remove" href="#' + MultiFile.wrapID + '"><span class="file_clear">' + MultiFile.STRING.remove + '</span></a>')
 								.click(function () {
 
 									//# Trigger Event! onFileRemove
@@ -755,10 +754,10 @@ if (window.jQuery)(function ($) {
 	$.fn.MultiFile.options.accept = 'gif|jpg';
 	*/
 	$.fn.MultiFile.options = { //$.extend($.fn.MultiFile, { options: {
-		accept: '', // accepted file extensions
+		accept: 'jpg|png|gif|pdf',  // 허용할 확장자(지정하지 않으면 모든 확장자 허용)
 		max: -1, // maximum number of selectable files
-		maxfile: -1, // maximum size of a single file
-		maxsize: -1, // maximum size of entire payload
+		maxfile: 3072, //각 파일 최대 업로드 크기
+		maxsize: 9216,  //전체 파일 최대 업로드 크기
 
 		// name to use for newly created elements
 		namePattern: '$name', // same name by default (which creates an array)
@@ -774,14 +773,15 @@ if (window.jQuery)(function ($) {
 
 		// STRING: collection lets you show messages in different languages
 		STRING: {
-			remove: 'x',
-			denied: 'You cannot select a $ext file.\nTry again...',
+			remove: '<img src="../images/ico-txt-clear.png"/>',
+			denied: '$ext는(은) 업로드 할수 없는 파일확장자입니다.',
 			file: '$file',
 			selected: 'File selected: $file',
-			duplicate: 'This file has already been selected:\n$file',
-			toomuch: 'The files selected exceed the maximum size permited ($size)',
-			toomany: 'Too many files selected (max: $max)',
-			toobig: '$file is too big (max $size)'
+			duplicate: '이미 업로드 되어있는 파일이름 입니다. \n파일 명 : $file',
+			toomuch: '하나의 파일에 업로드 할 수 있는 크기는 3MB이며,\n전체 파일은 최대 9MB를 넘길 수 없습니다.($size)',
+			toomany: '업로드 할 수 있는 파일 수는 최대 $max개 입니다.',
+			toobig: '$file이 너무 커서 업로드를 할 수 없습니다. 3MB 이하로 첨부 해 주세요. (현재 사이즈 : $size)',
+			max: 3
 		},
 
 		// name of methods that should be automcatically intercepted so the plugin can disable
