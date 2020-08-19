@@ -283,7 +283,7 @@ body .month-picker-month-table tr td a.ui-state-highlight{background:#fff; borde
 .MultiFile-list:after{display:block; content:''; clear:both;}
 .MultiFile-list div.MultiFile-label > span .MultiFile-label:after{display:block; content:''; clear:both;}
 .MultiFile-list div.MultiFile-label > span .MultiFile-label{display:inline-block; width:100%;}
-.MultiFile-list div.MultiFile-label > span .MultiFile-title{display:block; font-size:0.9em; color:#333; font-weight:400; text-align:center;}
+.MultiFile-list div.MultiFile-label > span .MultiFile-title{display:block; font-size:0.9em; color:#333; font-weight:400; text-align:center; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width:113px; margin:0 auto;}
 div.MultiFile-label{width:50%; display:table-cell; height:120px; position:relative; text-align:center;}
 .MultiFile-list div.MultiFile-label > span .MultiFile-size{color:#ff0000; font-weight:400; padding-left:5px;}
 div.MultiFile-label .MultiFile-remove{position:absolute; left:5px; top:5px;}

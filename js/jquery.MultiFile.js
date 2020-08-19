@@ -449,7 +449,8 @@ if (window.jQuery)(function ($) {
 										(
 											'<span class="MultiFile-label" title="' + t + '">'+
 												(MultiFile.preview || $(slave).is('.with-preview') ? p : '' )+ '</span>' +
-											'<span class="MultiFile-title">'+ n + '<span class="MultiFile-size">' + '($size)' + '</span></span>'
+											'<span class="MultiFile-title">'+ n + '</span>' +
+											'<span class="MultiFile-size">' + '($size)' + '</span>'
 										)
 										.replace(/\$(file|name)/gi, (v.match(/[^\/\\]+$/gi)||[v])[0])
 										.replace(/\$(ext|extension|type)/gi, (v.match(/[^\.]+$/gi)||[''])[0])
@@ -754,7 +755,7 @@ if (window.jQuery)(function ($) {
 	$.fn.MultiFile.options.accept = 'gif|jpg';
 	*/
 	$.fn.MultiFile.options = { //$.extend($.fn.MultiFile, { options: {
-		accept: 'jpg|png|gif|pdf',  // 허용할 확장자(지정하지 않으면 모든 확장자 허용)
+		accept: 'jpg|png|gif',  // 허용할 확장자(지정하지 않으면 모든 확장자 허용)
 		max: -1, // maximum number of selectable files
 		maxfile: 3072, //각 파일 최대 업로드 크기
 		maxsize: 9216,  //전체 파일 최대 업로드 크기
