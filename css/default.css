@@ -142,16 +142,18 @@ body.modal-open{padding:0 !important;}
 
 #footer{background:#fff; width:100%; max-width:768px; position:fixed; bottom:0; box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);}
 #footer .footer_menu ul:after{display:block; content:''; clear:both;}
-#footer .footer_menu ul li{float:left; width:50%; text-align:center;}
+#footer .footer_menu ul li{float:left; width:33.33%; text-align:center;}
 #footer .footer_menu ul li:first-child{/* border-right:1px solid #d9d9d9; */}
 #footer .footer_menu ul li a{color:#333; width:100%; font-size:1.4em; position:relative; padding:10px 0; display:block;}
 #footer .footer_menu ul li a span{background:url('../images/common_ico.png')no-repeat; width:25px; height:25px; background-size:200px; text-indent:-9999px; margin:0 auto; display:block; margin-bottom:5px;}
 #footer .footer_menu ul li a span.home_img{background-position:-13px -83px;}
 #footer .footer_menu ul li a span.report_img{background-position:-47px -83px;}
+#footer .footer_menu ul li a span.chart_img{background-position:-80px -83px;}
 
 #footer .footer_menu ul li.on a{color:#849c23; /* background:#d9d9d9; */}
 #footer .footer_menu ul li.on a span.home_img{background-position:-13px -122px;}
 #footer .footer_menu ul li.on a span.report_img{background-position:-47px -122px;}
+#footer .footer_menu ul li.on a span.chart_img{background-position:-80px -122px;}
 
 
 .m_work .modal-dialog{position:absolute; bottom:0; margin:0; width:100%;}
